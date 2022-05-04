@@ -1,0 +1,12 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="test.ValidateRequest"><rhs name\="test.VisaCard"/><rhs name\="test.MasterCard"/><rhs name\="test.DiscoverCard"/><rhs name\="test.AmexCard"/><rhs name\="test.Booking"/><rhs name\="test.FlightDatabase"/></lhs><lhs name\="test.FlightDatabase"><rhs name\="test.FlightDatabase"/></lhs><lhs name\="test.Card"><rhs name\="test.VisaCard"/><rhs name\="test.MasterCard"/><rhs name\="test.DiscoverCard"/><rhs name\="test.AmexCard"/></lhs><lhs name\="test.VisaCard"><rhs name\="test.VisaCard"/></lhs><lhs name\="test.MasterCard"><rhs name\="test.MasterCard"/></lhs><lhs name\="test.DiscoverCard"><rhs name\="test.DiscoverCard"/></lhs><lhs name\="test.AmexCard"><rhs name\="test.AmexCard"/></lhs><lhs name\="test.Booking"><rhs name\="test.Booking"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=22
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

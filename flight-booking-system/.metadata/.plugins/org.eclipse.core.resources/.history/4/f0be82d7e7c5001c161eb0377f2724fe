@@ -1,0 +1,20 @@
+package test;
+
+import java.io.File;
+
+public class Data {
+	
+	private String bookingName,flightNumber, seatCategory,paymentCardNumber, numberOfSeats;
+	private File outputCSV, outputTxt;
+
+	public Data(String bookingName, String flightNumber, String seatCategory, String paymentCardNumber, String numberOfSeats, File outputCSV, File outputTxt) {
+		this.bookingName = bookingName;
+		this.flightNumber = flightNumber;
+		this.seatCategory = seatCategory;
+		this.numberOfSeats = numberOfSeats;
+		this.paymentCardNumber = paymentCardNumber;
+		this.outputCSV = outputCSV;
+		this.outputTxt = outputTxt;
+	}
+
+}

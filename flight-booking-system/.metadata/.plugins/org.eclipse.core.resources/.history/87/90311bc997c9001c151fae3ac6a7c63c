@@ -1,0 +1,32 @@
+package test;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
+
+public class Data {
+	
+	String bookingName,flightNumber, seatCategory,paymentCardNumber, numberOfSeats;
+	File outputCSV, outputTxt;
+	String[] csvList;
+ 
+	public Data(String bookingName, String flightNumber, String seatCategory, String numberOfSeats, String paymentCardNumber, File outputCSV, File outputTxt, String[] csvList) {
+		this.bookingName = bookingName;
+		this.flightNumber = flightNumber;
+		this.seatCategory = seatCategory;
+		this.numberOfSeats = numberOfSeats;
+		this.paymentCardNumber = paymentCardNumber;
+		this.outputCSV = outputCSV;
+		this.outputTxt = outputTxt;
+		this.csvList = csvList;
+	}
+
+	public void printErrorToFile(Data data, String reason) throws IOException {
+		FileWriter fstream = new FileWriter(data.outputTxt, true);
+		BufferedWriter out = new BufferedWriter(fstream);
+		out.write("Please enter correct booking details for " + data.bookingName + reason);
+		out.close();
+	}
+}

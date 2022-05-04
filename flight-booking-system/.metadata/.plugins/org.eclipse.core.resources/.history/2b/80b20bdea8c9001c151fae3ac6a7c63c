@@ -1,0 +1,27 @@
+package test;
+
+import java.io.IOException;
+
+public class RunClient {
+	static String bookingFile, flightDB, bookingCsv, bookingError;
+
+	public static void main(String[] args) throws IOException {
+//		if (args.length == 4) {
+//			bookingFile = args[0];
+//			flightDB = args[1];
+//			bookingCsv = args[2];
+//			bookingError = args[3];
+		
+		bookingFile = "E:\\CMPE-202-IP\\Sample.csv";
+		flightDB = "E:\\CMPE-202-IP\\flightsdata.csv";
+		bookingCsv = "E:\\CMPE-202-IP\\output.csv";
+		bookingError = "E:\\CMPE-202-IP\\error.txt";
+
+			Booking booking = new Booking(flightDB, bookingCsv, bookingError);
+			booking.bookFlight(bookingFile);
+//		} else {
+//			System.out.println("provide proper arguments");
+//		}
+	}
+
+}

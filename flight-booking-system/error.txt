@@ -1,0 +1,48 @@
+Please enter correct booking details for Sierra2 : Seats not avaliable or seat request invalid
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Richard : invalid card
+Please enter correct booking details for Anna3 : Seats not avaliable or seat request invalid
+Please enter correct booking details for John : invalid flight number
+Please enter correct booking details for Sierra0 : invalid card
+Please enter correct booking details for Sierra1 : invalid seat category
+Please enter correct booking details for Sierra2 : Seats not avaliable or seat request invalid
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Richard : invalid card
+Please enter correct booking details for Anna3 : Seats not avaliable or seat request invalid
+Please enter correct booking details for John : invalid flight number
+Please enter correct booking details for Sierra0 : invalid card
+Please enter correct booking details for Sierra1 : invalid seat category
+Please enter correct booking details for Sierra2 : Seats not avaliable or seat request invalid
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Richard : invalid card
+Please enter correct booking details for Anna3 : Seats not avaliable or seat request invalid
+Please enter correct booking details for John : invalid flight number
+Please enter correct booking details for Sierra0 : invalid card
+Please enter correct booking details for Sierra1 : invalid seat category
+Please enter correct booking details for Sierra2 : Seats not avaliable or seat request invalid
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Richard : invalid card
+Please enter correct booking details for Anna3 : Seats not avaliable or seat request invalid
+Please enter correct booking details for John : invalid flight number
+Please enter correct booking details for Sierra0 : invalid card
+Please enter correct booking details for Sierra1 : invalid seat category
+Please enter correct booking details for Sierra2 : Seats not avaliable or seat request invalid
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Richard : invalid card
+Please enter correct booking details for Anna3 : Seats not avaliable or seat request invalid
+Please enter correct booking details for John : invalid flight number
+Please enter correct booking details for Sierra0 : invalid card
+Please enter correct booking details for Sierra1 : invalid seat category
+Please enter correct booking details for Sierra2 : Seats not avaliable or seat request invalid
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Sam : invalid card
+Please enter correct booking details for Richard : invalid card
+Please enter correct booking details for Anna3 : Seats not avaliable or seat request invalid
+Please enter correct booking details for John : invalid flight number
+Please enter correct booking details for Sierra0 : invalid card
+Please enter correct booking details for Sierra1 : invalid seat category

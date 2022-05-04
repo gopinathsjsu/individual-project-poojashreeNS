@@ -1,0 +1,24 @@
+package test;
+
+import java.io.IOException;
+
+public class RunClient {
+
+	
+	
+	public static void main(String[] args) {
+		
+		try {
+			FlightDatabase fDatabase = FlightDatabase.getInstance();
+			fDatabase.createFlight("C:\\Users\\pooja\\Downloads\\flightsdata.csv");
+			
+			booking.bookFlight("C:\\Users\\pooja\\Downloads\\Sample.csv");
+			
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

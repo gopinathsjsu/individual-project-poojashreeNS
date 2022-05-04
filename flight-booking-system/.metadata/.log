@@ -1,0 +1,1815 @@
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-05-03 17:34:53.709
+!MESSAGE An internal error occurred during: "Refresh Diagram".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "com.yattasolutions.obf.jc.g.kR()" because "com.yattasolutions.obf.hd.a$e.a(com.yattasolutions.obf.hd.a$e).aUh" is null
+	at com.yattasolutions.obf.hd.a$e$1.execute(SourceFile:389)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:119)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:208)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:165)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:757)
+	at com.yattasolutions.obf.nu.k.b(SourceFile:820)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:668)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:661)
+	at com.yattasolutions.obf.hd.a$e.run(SourceFile:368)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.yattasolutions.codegen.reverse 2 0 2022-05-03 17:34:53.772
+!MESSAGE Exception loading code details: Premature end of file.
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Premature end of file.
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at com.yattasolutions.obf.dw.x.doExecute(SourceFile:128)
+	at com.yattasolutions.obf.nd.v$b.doExecute(SourceFile:75)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at com.yattasolutions.obf.nd.v.execute(SourceFile:186)
+	at com.yattasolutions.obf.nd.y.b(SourceFile:791)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:777)
+	at com.yattasolutions.obf.nd.y$3.run(SourceFile:737)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2340)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:751)
+	at com.yattasolutions.obf.nd.y.b(SourceFile:657)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:610)
+	at com.yattasolutions.obf.nd.y.b(SourceFile:580)
+	at com.yattasolutions.obf.ag.g.a(SourceFile:290)
+	at com.yattasolutions.obf.ag.g.doExecute(SourceFile:249)
+	at com.yattasolutions.obf.nd.v.execute(SourceFile:212)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at com.yattasolutions.obf.nd.y.c(SourceFile:799)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:762)
+	at com.yattasolutions.obf.nd.y.b(SourceFile:657)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:610)
+	at com.yattasolutions.obf.nd.z.a(SourceFile:151)
+	at com.yattasolutions.obf.nd.z$b.run(SourceFile:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: file:/E:/CMPE-202-IP/.metadata/.plugins/org.eclipse.core.resources/.projects/flightreservation/com.yattasolutions.codegen/layout__ERvT0Ms-EeyLt6MJUq0STw.ws; systemId: file:/E:/CMPE-202-IP/.metadata/.plugins/org.eclipse.core.resources/.projects/flightreservation/com.yattasolutions.codegen/layout__ERvT0Ms-EeyLt6MJUq0STw.ws; lineNumber: 5532; columnNumber: 51; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.endOfFileHook(XMLDocumentScannerImpl.java:1311)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3115)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:326)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 27 more
+!SUBENTRY 1 com.yattasolutions.codegen.reverse 2 0 2022-05-03 17:34:53.773
+!MESSAGE Exception loading code details: Premature end of file.
+!STACK 0
+org.eclipse.emf.ecore.resource.Resource$IOWrappedException: Premature end of file.
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:195)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:261)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at com.yattasolutions.obf.dw.x.doExecute(SourceFile:128)
+	at com.yattasolutions.obf.nd.v$b.doExecute(SourceFile:75)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at com.yattasolutions.obf.nd.v.execute(SourceFile:186)
+	at com.yattasolutions.obf.nd.y.b(SourceFile:791)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:777)
+	at com.yattasolutions.obf.nd.y$3.run(SourceFile:737)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2315)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2340)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:751)
+	at com.yattasolutions.obf.nd.y.b(SourceFile:657)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:610)
+	at com.yattasolutions.obf.nd.y.b(SourceFile:580)
+	at com.yattasolutions.obf.ag.g.a(SourceFile:290)
+	at com.yattasolutions.obf.ag.g.doExecute(SourceFile:249)
+	at com.yattasolutions.obf.nd.v.execute(SourceFile:212)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at com.yattasolutions.obf.nd.y.c(SourceFile:799)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:762)
+	at com.yattasolutions.obf.nd.y.b(SourceFile:657)
+	at com.yattasolutions.obf.nd.y.a(SourceFile:610)
+	at com.yattasolutions.obf.nd.z.a(SourceFile:151)
+	at com.yattasolutions.obf.nd.z$b.run(SourceFile:67)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: file:/E:/CMPE-202-IP/.metadata/.plugins/org.eclipse.core.resources/.projects/flightreservation/com.yattasolutions.codegen/layout__ERvT0Ms-EeyLt6MJUq0STw.ws; systemId: file:/E:/CMPE-202-IP/.metadata/.plugins/org.eclipse.core.resources/.projects/flightreservation/com.yattasolutions.codegen/layout__ERvT0Ms-EeyLt6MJUq0STw.ws; lineNumber: 5532; columnNumber: 51; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$ContentDriver.endOfFileHook(XMLDocumentScannerImpl.java:1311)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:3115)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:605)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:542)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:889)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:825)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1224)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:637)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:326)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	... 27 more
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-05-03 17:34:53.773
+!MESSAGE An internal error occurred during: "Refresh Diagram".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "com.yattasolutions.obf.jc.g.kR()" because "com.yattasolutions.obf.hd.a$e.a(com.yattasolutions.obf.hd.a$e).aUh" is null
+	at com.yattasolutions.obf.hd.a$e$1.execute(SourceFile:389)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:119)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:208)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:165)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:757)
+	at com.yattasolutions.obf.nu.k.b(SourceFile:820)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:668)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:661)
+	at com.yattasolutions.obf.hd.a$e.run(SourceFile:368)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.yattasolutions.codegen 2 0 2022-05-03 17:35:01.107
+!MESSAGE Compared generated code with originally reverse engineered code successfully.
+!SUBENTRY 1 unknown 2 0 2022-05-03 17:35:01.107
+!MESSAGE OK
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in ValidateRequest.java @39.
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in Flight.java @82.
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in Flight.java @787.
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in Data.java @204.
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in Data.java @235.
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in Data.java @340.
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in ValidateRequest.java @129.
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in ValidateRequest.java @263.
+!SUBENTRY 2 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:01.107
+!MESSAGE No element found for Declaration in Data.java @945.
+
+!ENTRY com.yattasolutions.codegen.reverse 2 0 2022-05-03 17:35:02.121
+!MESSAGE Finished Round Trip Operation
+!SUBENTRY 1 com.yattasolutions.codegen 2 0 2022-05-03 17:35:02.121
+!MESSAGE Compared generated code with originally reverse engineered code successfully.
+!SUBENTRY 2 unknown 2 0 2022-05-03 17:35:02.121
+!MESSAGE OK
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in ValidateRequest.java @39.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in Flight.java @82.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in Flight.java @787.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in Data.java @204.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in Data.java @235.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in Data.java @340.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in ValidateRequest.java @129.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in ValidateRequest.java @263.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.121
+!MESSAGE No element found for Declaration in Data.java @945.
+
+!ENTRY com.yattasolutions.codegen.reverse 2 0 2022-05-03 17:35:02.135
+!MESSAGE Finished Round Trip Operation
+!SUBENTRY 1 com.yattasolutions.codegen 2 0 2022-05-03 17:35:02.135
+!MESSAGE Compared generated code with originally reverse engineered code successfully.
+!SUBENTRY 2 unknown 2 0 2022-05-03 17:35:02.135
+!MESSAGE OK
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in ValidateRequest.java @39.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in Flight.java @82.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in Flight.java @787.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in Data.java @204.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in Data.java @235.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in Data.java @340.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in ValidateRequest.java @129.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in ValidateRequest.java @263.
+!SUBENTRY 3 com.yattasolutions.codegen.reverse 2 85 2022-05-03 17:35:02.135
+!MESSAGE No element found for Declaration in Data.java @945.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.140
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.140
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.140
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.141
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.141
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.262
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.262
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.292
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.292
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.292
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.298
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.312
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.312
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.313
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.313
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.313
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.313
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.313
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.313
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.313
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.314
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.314
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.314
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.314
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.315
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.315
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.315
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.318
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.319
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.319
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.319
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.320
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.320
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.321
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.321
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.321
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.321
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.321
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.322
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.322
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.322
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.322
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.323
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.323
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.323
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.323
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.324
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.324
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.324
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.326
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.327
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.327
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.327
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.327
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.327
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.327
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.327
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.328
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.328
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.328
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.328
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.328
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.329
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.329
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.329
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.329
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.329
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.329
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.330
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.330
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.330
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.330
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.330
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.330
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.330
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.331
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.331
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.331
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.331
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.331
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.331
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.332
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.332
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.332
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.332
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.332
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.332
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.332
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.333
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.333
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.333
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.333
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.333
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.334
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.334
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.334
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.334
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.334
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.335
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.335
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.335
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.336
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.336
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.336
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.336
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.337
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.337
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.337
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.338
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.338
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.338
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.338
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.339
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.339
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.339
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.339
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.339
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.340
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.340
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.340
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.340
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.341
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.341
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.341
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.341
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.341
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.341
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.342
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.342
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.342
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.342
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.342
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.343
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.343
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.343
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.343
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.343
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.343
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.344
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.344
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.344
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.344
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.344
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.345
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.345
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.345
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.345
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.345
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.346
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.346
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.346
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.346
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.346
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.346
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.347
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.347
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.347
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.347
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.347
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.347
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.347
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.348
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.348
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.348
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.348
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.348
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.348
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.349
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.349
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.349
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.349
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.349
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.349
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.349
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.350
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.350
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.350
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.350
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.350
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.351
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.351
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.351
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.352
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.352
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.352
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.352
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.353
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.353
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.353
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.353
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.353
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.354
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.354
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.354
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.354
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.354
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.355
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.355
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.355
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.355
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.355
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.356
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.356
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.356
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.356
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.361
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.361
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.362
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.362
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.362
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.362
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.362
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.362
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.362
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.363
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.363
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.363
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.363
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.363
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.363
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.363
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.364
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.364
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.364
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.364
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.364
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.364
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.365
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.365
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.365
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.365
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.365
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.366
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.366
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.366
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.366
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.366
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.367
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.367
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.367
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.367
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.368
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.368
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.368
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.369
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.369
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.369
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.370
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.370
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.370
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.370
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.370
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.370
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.371
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.371
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.371
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.371
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.371
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.372
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.372
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.372
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.372
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.372
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.372
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.373
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.373
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.373
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.373
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.373
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.374
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.374
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.374
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.374
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.375
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.375
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.375
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.375
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.375
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.375
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.376
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.376
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.376
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.376
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.376
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.376
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.376
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.377
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.377
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.377
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.377
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.377
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.377
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.377
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.377
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.378
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.378
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.378
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.378
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.378
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.378
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.379
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.379
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.379
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.379
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.379
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.379
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.379
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.380
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.380
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.380
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.380
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.380
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.380
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.380
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.381
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.381
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.381
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.381
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.381
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.381
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.382
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.382
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.382
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.382
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.382
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.383
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.383
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.383
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.383
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.383
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.383
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.384
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.384
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.384
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.384
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.385
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.385
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.385
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.385
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.385
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.386
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.386
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.386
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.386
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.386
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.387
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.387
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.387
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.387
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.387
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.388
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.388
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.388
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.388
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.389
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.389
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.389
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.389
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.390
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.390
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.390
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.390
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.390
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.391
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.391
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.391
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.391
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.391
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.391
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.391
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.392
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.392
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.392
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.392
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.392
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.392
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.392
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.393
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.393
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.393
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.393
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.393
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.393
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.393
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.393
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.394
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.394
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.394
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY com.yattasolutions.diagrams.editor 4 0 2022-05-03 17:35:04.394
+!MESSAGE Could not apply OCL constraint-validation results to editors.
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-05-03 17:35:15.930
+!MESSAGE An internal error occurred during: "Refresh Diagram".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "com.yattasolutions.obf.jc.g.kR()" because "com.yattasolutions.obf.hd.a$e.a(com.yattasolutions.obf.hd.a$e).aUh" is null
+	at com.yattasolutions.obf.hd.a$e$1.execute(SourceFile:389)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:119)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:208)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:165)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:757)
+	at com.yattasolutions.obf.nu.k.b(SourceFile:820)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:668)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:661)
+	at com.yattasolutions.obf.hd.a$e.run(SourceFile:368)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.core.jobs 4 2 2022-05-03 17:35:15.933
+!MESSAGE An internal error occurred during: "Refresh Diagram".
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "com.yattasolutions.obf.jc.g.kR()" because "com.yattasolutions.obf.hd.a$e.a(com.yattasolutions.obf.hd.a$e).aUh" is null
+	at com.yattasolutions.obf.hd.a$e$1.execute(SourceFile:389)
+	at org.eclipse.emf.workspace.EMFCommandOperation.doExecute(EMFCommandOperation.java:119)
+	at org.eclipse.emf.workspace.AbstractEMFOperation.execute(AbstractEMFOperation.java:150)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.execute(DefaultOperationHistory.java:496)
+	at org.eclipse.emf.workspace.impl.WorkspaceCommandStackImpl.doExecute(WorkspaceCommandStackImpl.java:208)
+	at org.eclipse.emf.transaction.impl.AbstractTransactionalCommandStack.execute(AbstractTransactionalCommandStack.java:165)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:757)
+	at com.yattasolutions.obf.nu.k.b(SourceFile:820)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:668)
+	at com.yattasolutions.obf.nu.k.a(SourceFile:661)
+	at com.yattasolutions.obf.hd.a$e.run(SourceFile:368)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-05-03 19:00:14.499
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:182)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:139)
+	at com.yattasolutions.obf.hq.r.fillShape(SourceFile:90)
+	at org.eclipse.draw2d.Shape.paintFill(Shape.java:195)
+	at org.eclipse.draw2d.Shape.paintFigure(Shape.java:143)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1118)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1209)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Viewport.paintClientArea(Viewport.java:160)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.DeferredUpdateManager.paint(DeferredUpdateManager.java:168)
+	at org.eclipse.draw2d.LightweightSystem.paint(LightweightSystem.java:203)
+	at org.eclipse.draw2d.LightweightSystem$2.handleEvent(LightweightSystem.java:110)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-05-03 19:00:14.500
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:182)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:139)
+	at com.yattasolutions.obf.hq.r.fillShape(SourceFile:90)
+	at org.eclipse.draw2d.Shape.paintFill(Shape.java:195)
+	at org.eclipse.draw2d.Shape.paintFigure(Shape.java:143)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1118)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1209)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Viewport.paintClientArea(Viewport.java:160)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.DeferredUpdateManager.paint(DeferredUpdateManager.java:168)
+	at org.eclipse.draw2d.LightweightSystem.paint(LightweightSystem.java:203)
+	at org.eclipse.draw2d.LightweightSystem$2.handleEvent(LightweightSystem.java:110)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-05-03 19:00:14.500
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:182)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:139)
+	at com.yattasolutions.obf.hq.r.fillShape(SourceFile:90)
+	at org.eclipse.draw2d.Shape.paintFill(Shape.java:195)
+	at org.eclipse.draw2d.Shape.paintFigure(Shape.java:143)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1118)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1209)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Viewport.paintClientArea(Viewport.java:160)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.DeferredUpdateManager.paint(DeferredUpdateManager.java:168)
+	at org.eclipse.draw2d.LightweightSystem.paint(LightweightSystem.java:203)
+	at org.eclipse.draw2d.LightweightSystem$2.handleEvent(LightweightSystem.java:110)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-05-03 19:00:14.500
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:182)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:139)
+	at com.yattasolutions.obf.hq.r.fillShape(SourceFile:90)
+	at org.eclipse.draw2d.Shape.paintFill(Shape.java:195)
+	at org.eclipse.draw2d.Shape.paintFigure(Shape.java:143)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1118)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1209)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Viewport.paintClientArea(Viewport.java:160)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.DeferredUpdateManager.paint(DeferredUpdateManager.java:168)
+	at org.eclipse.draw2d.LightweightSystem.paint(LightweightSystem.java:203)
+	at org.eclipse.draw2d.LightweightSystem$2.handleEvent(LightweightSystem.java:110)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-05-03 19:00:14.500
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:182)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:139)
+	at com.yattasolutions.obf.hq.r.fillShape(SourceFile:90)
+	at org.eclipse.draw2d.Shape.paintFill(Shape.java:195)
+	at org.eclipse.draw2d.Shape.paintFigure(Shape.java:143)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1118)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1209)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Viewport.paintClientArea(Viewport.java:160)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.DeferredUpdateManager.paint(DeferredUpdateManager.java:168)
+	at org.eclipse.draw2d.LightweightSystem.paint(LightweightSystem.java:203)
+	at org.eclipse.draw2d.LightweightSystem$2.handleEvent(LightweightSystem.java:110)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-05-03 19:00:14.501
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:182)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:139)
+	at com.yattasolutions.obf.hq.r.fillShape(SourceFile:90)
+	at org.eclipse.draw2d.Shape.paintFill(Shape.java:195)
+	at org.eclipse.draw2d.Shape.paintFigure(Shape.java:143)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1118)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1209)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Viewport.paintClientArea(Viewport.java:160)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.DeferredUpdateManager.paint(DeferredUpdateManager.java:168)
+	at org.eclipse.draw2d.LightweightSystem.paint(LightweightSystem.java:203)
+	at org.eclipse.draw2d.LightweightSystem$2.handleEvent(LightweightSystem.java:110)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+
+!ENTRY org.eclipse.ui.ide 4 4 2022-05-03 19:00:14.501
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:182)
+	at org.eclipse.swt.graphics.Pattern.<init>(Pattern.java:139)
+	at com.yattasolutions.obf.hq.r.fillShape(SourceFile:90)
+	at org.eclipse.draw2d.Shape.paintFill(Shape.java:195)
+	at org.eclipse.draw2d.Shape.paintFigure(Shape.java:143)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1118)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1209)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Viewport.paintClientArea(Viewport.java:160)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.Figure.paintChildren(Figure.java:1170)
+	at org.eclipse.draw2d.Figure.paintClientArea(Figure.java:1205)
+	at org.eclipse.draw2d.Figure.paint(Figure.java:1120)
+	at org.eclipse.draw2d.DeferredUpdateManager.paint(DeferredUpdateManager.java:168)
+	at org.eclipse.draw2d.LightweightSystem.paint(LightweightSystem.java:203)
+	at org.eclipse.draw2d.LightweightSystem$2.handleEvent(LightweightSystem.java:110)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4243)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1063)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1087)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1072)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1536)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4803)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:340)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5023)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3630)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1155)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)

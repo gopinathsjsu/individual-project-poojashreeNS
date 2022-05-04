@@ -1,0 +1,22 @@
+package test;
+
+public class DiscoverCard extends Card {
+
+	public DiscoverCard() {
+	}
+
+	public boolean validateCardDetails(String cardInfo) {
+		return (cardInfo.length() == 16);
+	}
+
+	@Override
+	public void validateRequest(Data data) throws Exception {
+		if (validateCardDetails(data.paymentCardNumber)) {
+			setNextRequest(null);
+		} else {
+			System.out.println("Card invalid");
+			throw new Exception("Card Invalid");
+		}
+	}
+
+}

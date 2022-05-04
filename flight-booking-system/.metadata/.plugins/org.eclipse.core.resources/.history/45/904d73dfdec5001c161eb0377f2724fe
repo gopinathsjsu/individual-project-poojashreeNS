@@ -1,0 +1,13 @@
+package test;
+
+public abstract class ValidateRequest {
+	
+	protected ValidateRequest nextRequest;
+	
+	public void setNextRequest(ValidateRequest nextRequest) {
+		this.nextRequest = nextRequest;
+	}
+	
+	public abstract void validateRequest(ValidateRequest nextRequest);
+
+}

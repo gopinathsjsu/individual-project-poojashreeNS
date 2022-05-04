@@ -1,0 +1,90 @@
+package test;
+
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.List;
+
+import com.opencsv.CSVReader;
+import com.opencsv.CSVReaderBuilder;
+
+public class Booking extends ValidateRequest {
+	
+	
+	FlightDatabase flightDatabase;
+	Flight flight;
+	ValidateRequest validateRequestObject;
+	int avaliableSeats, updatedSeats;
+	VisaCard visaCard;
+	MasterCard masterCard;
+	DiscoverCard discoverCard;
+	AmexCard amexCard;
+	Data data;
+	File csv, text, bookingSample;
+
+	public Booking( ) {
+		FlightDatabase.getInstance();
+		visaCard = new VisaCard();
+		masterCard = new MasterCard();
+		discoverCard = new DiscoverCard();
+		amexCard = new AmexCard();
+		bookingSample = new File("output.csv");
+		csv = new File("output.csv");
+		text = new File("output.txt");
+	}
+
+	public void bookFlight(String bookingData) throws IOException {
+		try {
+			FileReader fReader = new FileReader(bookingData);
+
+			CSVReader csvReader = new CSVReaderBuilder(fReader).withSkipLines(1).build();
+			List<String[]> allData = csvReader.readAll();
+
+			for (String[] row : allData) {
+				try {
+					data = new Data(row[0], row[1], row[2], row[3], row[4], csv, text);
+
+					validateRequest(data);
+
+					if (data.paymentCardNumber.startsWith("4")) {
+						validateRequestObject = setNextRequest(visaCard);
+						validateRequestObject.validateRequest(data);
+					} else if (data.paymentCardNumber.startsWith("5")) {
+						validateRequestObject = setNextRequest(masterCard);
+						validateRequestObject.validateRequest(data);
+					} else if (data.paymentCardNumber.substring(0, 4) == "6011") {
+						validateRequestObject = setNextRequest(discoverCard);
+						validateRequestObject.validateRequest(data);
+					} else if (data.paymentCardNumber.startsWith("3")) {
+						validateRequestObject = setNextRequest(amexCard);
+						validateRequestObject.validateRequest(data);
+					} else {
+						data.printErrorToFile(data, " : invalid payment type" + "\n");
+					}
+
+					flight = flightDatabase.getFlightInfo(data.flightNumber);
+					avaliableSeats = flight.getAvaliableSeats(data.seatCategory);
+					updatedSeats = avaliableSeats - Integer.parseInt(data.numberOfSeats);
+					flight.setAvaliableSeats(data.seatCategory, updatedSeats);
+					flightDatabase.updateFlightInfo(data.flightNumber, flight);
+				} catch (Exception e) {
+
+				}
+				System.out.println(row);
+			}
+		} catch (IOException e) {
+		}
+	}
+
+	@Override
+	public void validateRequest(Data data) throws Exception {
+		if (flightDatabase != null) {
+			validateRequestObject = setNextRequest(flightDatabase);
+			validateRequestObject.validateRequest(data);
+		} else {
+			data.printErrorToFile(data, " : invalid flight number" + "\n");
+			throw new Exception();
+		}
+	}
+
+}

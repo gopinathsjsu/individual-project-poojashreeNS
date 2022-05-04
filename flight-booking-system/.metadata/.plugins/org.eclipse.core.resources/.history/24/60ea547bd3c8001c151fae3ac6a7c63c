@@ -1,0 +1,12 @@
+package test;
+
+public class RunClient {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Booking booking = new Booking();
+		booking.bookFlight("C:\\Users\\pooja\\Downloads\\Sample.csv");
+
+	}
+
+}

@@ -1,0 +1,24 @@
+package test;
+
+public class AmexCard extends Card {
+	
+	Booking booking;
+	
+	public AmexCard() {
+	}
+
+	public boolean validateCardDetails(String cardInfo) {
+		return (cardInfo.length() == 15 && cardInfo.substring(0, 2) == "4"
+				|| cardInfo.substring(0, 2) == "7");
+	}
+
+	@Override
+	public void validateRequest(Data data) throws Exception {
+		if(validateCardDetails(data.paymentCardNumber)) {
+			setNextRequest(null);
+		} else {
+			booking.printErrorToFile(data, " : invalid card");
+			throw new Exception("card Invalid");
+		}
+	}
+}

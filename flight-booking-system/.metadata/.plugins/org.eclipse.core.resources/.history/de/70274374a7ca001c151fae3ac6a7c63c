@@ -1,0 +1,23 @@
+package test;
+
+public class VisaCard extends Card{
+
+	public VisaCard() {
+	}
+
+	public boolean validateCardDetails(String cardInfo) {
+		return (cardInfo.length() == 16 || cardInfo.length() == 13 && cardInfo.startsWith("4"));
+	}
+
+	
+	@Override
+	public void validateRequest(Data data) throws Exception {
+		if(validateCardDetails(data.paymentCardNumber)) {
+			setNextRequest(null);
+		} else {
+			data.printErrorToFile(data, " : invalid card" + "\n");
+			throw new Exception();
+		}
+	}
+
+}

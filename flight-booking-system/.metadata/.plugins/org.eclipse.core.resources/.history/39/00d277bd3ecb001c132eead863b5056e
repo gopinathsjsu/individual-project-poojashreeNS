@@ -1,0 +1,1510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:UMLLabProfile="http:///schemas/UMLLabProfile/NS/0" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/UMLLabProfile/NS/0 pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile">
+  <uml:Model xmi:id="_ERvT0Ms-EeyLt6MJUq0STw" name="flightreservation">
+    <eAnnotations xmi:id="_Ei6jYMs-EeyLt6MJUq0STw" source="http://ns.yatta.de/umllab">
+      <contents xmi:type="ecore:EAnnotation" xmi:id="_Ei6jYcs-EeyLt6MJUq0STw" source="codegen">
+        <details xmi:id="_Ei6jYss-EeyLt6MJUq0STw" key="codegenDirectory" value="/flightreservation/src/main/java"/>
+        <details xmi:id="_IJAgUMs-EeyLt6MJUq0STw" key="AssociatedSourceCode" value="/flightreservation/src/main/java/test/FlightDatabase.java;3030366949/1;"/>
+      </contents>
+    </eAnnotations>
+    <elementImport xmi:id="_E0h30Ms-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+    </elementImport>
+    <elementImport xmi:id="_E0h30cs-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#byte"/>
+    </elementImport>
+    <elementImport xmi:id="_E0ie4Ms-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#char"/>
+    </elementImport>
+    <elementImport xmi:id="_E0ie4cs-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+    </elementImport>
+    <elementImport xmi:id="_E0ie4ss-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#float"/>
+    </elementImport>
+    <elementImport xmi:id="_E0ie48s-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+    </elementImport>
+    <elementImport xmi:id="_E0ie5Ms-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+    </elementImport>
+    <elementImport xmi:id="_E0ie5cs-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#short"/>
+    </elementImport>
+    <elementImport xmi:id="_E0jF8Ms-EeyLt6MJUq0STw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Package" xmi:id="_E0qasMs-EeyLt6MJUq0STw" name="test">
+      <packagedElement xmi:type="uml:Class" xmi:id="_E1WXMMs-EeyLt6MJUq0STw" name="AmexCard">
+        <generalization xmi:id="_E4RvYss-EeyLt6MJUq0STw" general="_E1cd0Ms-EeyLt6MJUq0STw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5ZwwMs-EeyLt6MJUq0STw" name="validateCardDetails" specification="_E1aooMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5Zwwcs-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5Zwwss-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return (cardInfo.length() == 15 &amp;&amp; (cardInfo.substring(0, 2) == &quot;4&quot; || cardInfo.substring(0, 2) == &quot;7&quot;));&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5dbIMs-EeyLt6MJUq0STw" name="validateRequest" specification="_E4QhQMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5dbIcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>if (validateCardDetails(data.paymentCardNumber)) {&#xD;
+			setNextRequest(null);&#xD;
+		} else {&#xD;
+			data.printErrorToFile(data, &quot; : invalid card&quot; + &quot;\n&quot;);&#xD;
+			throw new Exception();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E1YzcMs-EeyLt6MJUq0STw" name="AmexCard">
+          <eAnnotations xmi:id="_E1Yzccs-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E1Yzcss-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E1aBkMs-EeyLt6MJUq0STw" type="_E1WXMMs-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E1aooMs-EeyLt6MJUq0STw" name="validateCardDetails" method="_E5ZwwMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E1aoocs-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E1bPsMs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4QhQMs-EeyLt6MJUq0STw" name="validateRequest" method="_E5dbIMs-EeyLt6MJUq0STw" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4QhQcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E1cd0Ms-EeyLt6MJUq0STw" name="Card" isAbstract="true">
+        <generalization xmi:id="_E4SWcMs-EeyLt6MJUq0STw" general="_E18NEMs-EeyLt6MJUq0STw"/>
+        <ownedOperation xmi:id="_E1cd0cs-EeyLt6MJUq0STw" name="validateCardDetails" isAbstract="true">
+          <ownedParameter xmi:id="_E1dE4Ms-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E1dE4cs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E1dr8Ms-EeyLt6MJUq0STw" name="Data">
+        <ownedAttribute xmi:id="_E4-S8Ms-EeyLt6MJUq0STw" name="bookingName" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E4-6Acs-EeyLt6MJUq0STw" name="outputCSV" visibility="package" type="_E4ULoMs-EeyLt6MJUq0STw" association="_E50AcMs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E4_hEss-EeyLt6MJUq0STw" name="csvList" visibility="package" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E4_hE8s-EeyLt6MJUq0STw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5lW8Ms-EeyLt6MJUq0STw" name="flightNumber" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5l-Ass-EeyLt6MJUq0STw" name="seatCategory" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5l-Bcs-EeyLt6MJUq0STw" name="paymentCardNumber" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5mlEss-EeyLt6MJUq0STw" name="numberOfSeats" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5nMIMs-EeyLt6MJUq0STw" name="outputTxt" visibility="package" type="_E4ULoMs-EeyLt6MJUq0STw" association="_E58jUcs-EeyLt6MJUq0STw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5dbIss-EeyLt6MJUq0STw" name="Data" specification="_E42XIMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5dbI8s-EeyLt6MJUq0STw" name="bookingName">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5dbJMs-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5dbJcs-EeyLt6MJUq0STw" name="seatCategory">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5dbJss-EeyLt6MJUq0STw" name="numberOfSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5dbJ8s-EeyLt6MJUq0STw" name="paymentCardNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5dbKMs-EeyLt6MJUq0STw" name="outputCSV" type="_E4ULoMs-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E5dbKcs-EeyLt6MJUq0STw" name="outputTxt" type="_E4ULoMs-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E5dbKss-EeyLt6MJUq0STw" name="csvlist2" type="_E4Wn4Ms-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E5dbK8s-EeyLt6MJUq0STw" type="_E1dr8Ms-EeyLt6MJUq0STw" direction="return"/>
+          <language>java</language>
+          <body>this.bookingName = bookingName;&#xD;
+		this.flightNumber = flightNumber;&#xD;
+		this.seatCategory = seatCategory;&#xD;
+		this.numberOfSeats = numberOfSeats;&#xD;
+		this.paymentCardNumber = paymentCardNumber;&#xD;
+		this.outputCSV = outputCSV;&#xD;
+		this.outputTxt = outputTxt;&#xD;
+		this.csvList = csvlist2;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5dbLMs-EeyLt6MJUq0STw" name="printErrorToFile" specification="_E4X2AMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5dbLcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E5dbLss-EeyLt6MJUq0STw" name="reason">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>FileWriter fstream = new FileWriter(data.outputTxt, true);&#xD;
+		BufferedWriter out = new BufferedWriter(fstream);&#xD;
+		out.write(&quot;Please enter correct booking details for &quot; + data.bookingName + reason);&#xD;
+		out.close();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5dbL8s-EeyLt6MJUq0STw" name="printListToCsv" specification="_E43lQcs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5dbMMs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E5dbMcs-EeyLt6MJUq0STw" name="csvList" type="_E4Wn4Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>FileWriter writer = new FileWriter(data.outputCSV, true);&#xD;
+		String collect = csvList.stream().collect(Collectors.joining(&quot;,&quot;));&#xD;
+&#xD;
+	    writer.write(collect);&#xD;
+	    writer.write(&quot;\n&quot;);&#xD;
+	    writer.close();&#xD;
+&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E4X2AMs-EeyLt6MJUq0STw" name="printErrorToFile" method="_E5dbLMs-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4X2Acs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E4X2Ass-EeyLt6MJUq0STw" name="reason">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E42XIMs-EeyLt6MJUq0STw" name="Data" method="_E5dbIss-EeyLt6MJUq0STw">
+          <eAnnotations xmi:id="_E42-MMs-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E42-Mcs-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E42XIcs-EeyLt6MJUq0STw" name="bookingName">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E42XIss-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E42XI8s-EeyLt6MJUq0STw" name="seatCategory">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E42XJMs-EeyLt6MJUq0STw" name="numberOfSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E42XJcs-EeyLt6MJUq0STw" name="paymentCardNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E42XJss-EeyLt6MJUq0STw" name="outputCSV" type="_E4ULoMs-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E42XJ8s-EeyLt6MJUq0STw" name="outputTxt" type="_E4ULoMs-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E42XKMs-EeyLt6MJUq0STw" name="csvlist2" type="_E4Wn4Ms-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E42-Mss-EeyLt6MJUq0STw" type="_E1dr8Ms-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E43lQcs-EeyLt6MJUq0STw" name="printListToCsv" method="_E5dbL8s-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E43lQss-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E43lQ8s-EeyLt6MJUq0STw" name="csvList" type="_E4Wn4Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E1ikcMs-EeyLt6MJUq0STw" name="DiscoverCard">
+        <generalization xmi:id="_E4aSQ8s-EeyLt6MJUq0STw" general="_E1cd0Ms-EeyLt6MJUq0STw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5eCMMs-EeyLt6MJUq0STw" name="validateCardDetails" specification="_E1lnwMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5eCMcs-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5eCMss-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return (cardInfo.length() == 16);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5eCM8s-EeyLt6MJUq0STw" name="validateRequest" specification="_E4ZrMMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5eCNMs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>if (validateCardDetails(data.paymentCardNumber)) {&#xD;
+			setNextRequest(null);&#xD;
+		} else {&#xD;
+			data.printErrorToFile(data, &quot; : invalid card&quot; + &quot;\n&quot;);&#xD;
+			throw new Exception();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E1jykMs-EeyLt6MJUq0STw" name="DiscoverCard">
+          <eAnnotations xmi:id="_E1kZoMs-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E1kZocs-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E1kZo8s-EeyLt6MJUq0STw" type="_E1ikcMs-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E1lnwMs-EeyLt6MJUq0STw" name="validateCardDetails" method="_E5eCMMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E1lnwcs-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E1lnwss-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4ZrMMs-EeyLt6MJUq0STw" name="validateRequest" method="_E5eCM8s-EeyLt6MJUq0STw" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4ZrMcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E1nc8Ms-EeyLt6MJUq0STw" name="FlightDatabase">
+        <generalization xmi:id="_E4gY4Ms-EeyLt6MJUq0STw" general="_E18NEMs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5AvMMs-EeyLt6MJUq0STw" name="flightDatabase" visibility="package" type="_E2NS0Ms-EeyLt6MJUq0STw" association="_E50ngMs-EeyLt6MJUq0STw">
+          <qualifier xmi:id="_E5BWQMs-EeyLt6MJUq0STw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </qualifier>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5BWQcs-EeyLt6MJUq0STw" name="flightNumber" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5BWQss-EeyLt6MJUq0STw" value="null"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5B9Ucs-EeyLt6MJUq0STw" name="validateRequestObject" visibility="package" type="_E18NEMs-EeyLt6MJUq0STw" association="_E50ng8s-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5CkYMs-EeyLt6MJUq0STw" name="flight" visibility="package" type="_E2NS0Ms-EeyLt6MJUq0STw" association="_E51Okcs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5CkYss-EeyLt6MJUq0STw" name="db_instance" isStatic="true" type="_E1nc8Ms-EeyLt6MJUq0STw" association="_E511ocs-EeyLt6MJUq0STw">
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5DLccs-EeyLt6MJUq0STw" value="null"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5epQMs-EeyLt6MJUq0STw" name="FlightDatabase" specification="_E1pSIMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5epQcs-EeyLt6MJUq0STw" type="_E1nc8Ms-EeyLt6MJUq0STw" direction="return"/>
+          <language>java</language>
+          <body>flightDatabase = new HashMap&lt;String, Flight>();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5epQss-EeyLt6MJUq0STw" name="getInstance" specification="_E1p5M8s-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5epQ8s-EeyLt6MJUq0STw" type="_E1nc8Ms-EeyLt6MJUq0STw" direction="return"/>
+          <language>java</language>
+          <body>if (db_instance == null)&#xD;
+			db_instance = new FlightDatabase();&#xD;
+&#xD;
+		return db_instance;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5epRMs-EeyLt6MJUq0STw" name="createFlight" specification="_E1rHUMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5epRcs-EeyLt6MJUq0STw" name="flightData">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>try {&#xD;
+			FileReader fReader = new FileReader(flightData);&#xD;
+&#xD;
+			CSVReader csvReader = new CSVReaderBuilder(fReader).withSkipLines(1).build();&#xD;
+			List&lt;String[]> allData = csvReader.readAll();&#xD;
+&#xD;
+			for (String[] row : allData) {&#xD;
+				flightNumber = row[1];&#xD;
+				if(flightDatabase.containsKey(flightNumber)) {&#xD;
+					flight = getFlightInfo(flightNumber);&#xD;
+				} else {&#xD;
+					flight = new Flight(row[1], row[4], row[5]);&#xD;
+				}&#xD;
+				flight.storeCategoryDetails(row[0], row[2], row[3]);&#xD;
+				flightDatabase.put(flightNumber, flight);&#xD;
+			}&#xD;
+		} catch (Exception e) {&#xD;
+			e.printStackTrace();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5epRss-EeyLt6MJUq0STw" name="getFlightInfo" specification="_E1ruYMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5epR8s-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5epSMs-EeyLt6MJUq0STw" type="_E2NS0Ms-EeyLt6MJUq0STw" direction="return"/>
+          <language>java</language>
+          <body>return flightDatabase.get(flightNumber);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5epScs-EeyLt6MJUq0STw" name="updateFlightInfo" specification="_E4fKwMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5epSss-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5epS8s-EeyLt6MJUq0STw" name="updatedFlightObject" type="_E2NS0Ms-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E5epTMs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>boolean isUpdate = false;&#xD;
+		if (flightDatabase.containsKey(flightNumber)) {&#xD;
+			flightDatabase.put(flightNumber, updatedFlightObject);&#xD;
+			isUpdate = true;&#xD;
+		}&#xD;
+		return isUpdate;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5fQUMs-EeyLt6MJUq0STw" name="isFlightExsist" specification="_E1s8gMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5fQUcs-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5fQUss-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return flightDatabase.containsKey(flightNumber);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5fQU8s-EeyLt6MJUq0STw" name="validateRequest" specification="_E4fKxMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5fQVMs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>if (data.flightNumber != null &amp;&amp; isFlightExsist(data.flightNumber)) {&#xD;
+			data.csvList.add(flightNumber);&#xD;
+			flight = getFlightInfo(data.flightNumber);&#xD;
+			validateRequestObject = setNextRequest(flight);&#xD;
+			validateRequestObject.validateRequest(data);&#xD;
+		} else {&#xD;
+			data.printErrorToFile(data, &quot; : invalid flight number&quot; + &quot;\n&quot;);&#xD;
+			throw new Exception();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E1pSIMs-EeyLt6MJUq0STw" name="FlightDatabase" visibility="private" method="_E5epQMs-EeyLt6MJUq0STw">
+          <eAnnotations xmi:id="_E1p5MMs-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E1p5Mcs-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E1p5Mss-EeyLt6MJUq0STw" type="_E1nc8Ms-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E1p5M8s-EeyLt6MJUq0STw" name="getInstance" isStatic="true" method="_E5epQss-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4ejsMs-EeyLt6MJUq0STw" type="_E1nc8Ms-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E1rHUMs-EeyLt6MJUq0STw" name="createFlight" method="_E5epRMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E1rHUcs-EeyLt6MJUq0STw" name="flightData">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E1ruYMs-EeyLt6MJUq0STw" name="getFlightInfo" method="_E5epRss-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E1ruYcs-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E4ejscs-EeyLt6MJUq0STw" type="_E2NS0Ms-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E1s8gMs-EeyLt6MJUq0STw" name="isFlightExsist" method="_E5fQUMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E1tjkMs-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E1tjkcs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4fKwMs-EeyLt6MJUq0STw" name="updateFlightInfo" method="_E5epScs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4fKwcs-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E4fKwss-EeyLt6MJUq0STw" name="updatedFlightObject" type="_E2NS0Ms-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E4fKw8s-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4fKxMs-EeyLt6MJUq0STw" name="validateRequest" method="_E5fQU8s-EeyLt6MJUq0STw" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4fx0Ms-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E1ycEMs-EeyLt6MJUq0STw" name="MasterCard">
+        <generalization xmi:id="_E4hnA8s-EeyLt6MJUq0STw" general="_E1cd0Ms-EeyLt6MJUq0STw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5fQVcs-EeyLt6MJUq0STw" name="validateCardDetails" specification="_E1zqMMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5fQVss-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5fQV8s-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return (cardInfo.length() == 16 &amp;&amp; cardInfo.substring(0, 2) == &quot;1&quot; || cardInfo.substring(0, 2) == &quot;2&quot;&#xD;
+				|| cardInfo.substring(0, 2) == &quot;4&quot; || cardInfo.substring(0, 2) == &quot;3&quot;&#xD;
+				|| cardInfo.substring(0, 2) == &quot;5&quot;);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5fQWMs-EeyLt6MJUq0STw" name="validateRequest" specification="_E4g_8Ms-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5fQWcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>if (validateCardDetails(data.paymentCardNumber)) {&#xD;
+			setNextRequest(null);&#xD;
+		} else {&#xD;
+			data.printErrorToFile(data, &quot; : invalid card&quot; + &quot;\n&quot;);&#xD;
+			throw new Exception();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E1ycEcs-EeyLt6MJUq0STw" name="MasterCard">
+          <eAnnotations xmi:id="_E1zDIMs-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E1zDIcs-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E1zDI8s-EeyLt6MJUq0STw" type="_E1ycEMs-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E1zqMMs-EeyLt6MJUq0STw" name="validateCardDetails" method="_E5fQVcs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E1zqMcs-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E1zqMss-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4g_8Ms-EeyLt6MJUq0STw" name="validateRequest" method="_E5fQWMs-EeyLt6MJUq0STw" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4g_8cs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E104UMs-EeyLt6MJUq0STw" name="RunClient">
+        <ownedAttribute xmi:id="_E5DygMs-EeyLt6MJUq0STw" name="bookingFile" visibility="package" isStatic="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5nzMMs-EeyLt6MJUq0STw" name="flightDB" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5nzM8s-EeyLt6MJUq0STw" name="bookingCsv" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5oaQcs-EeyLt6MJUq0STw" name="bookingError" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5f3YMs-EeyLt6MJUq0STw" name="main" specification="_E12GcMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5f3Ycs-EeyLt6MJUq0STw" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E5f3Yss-EeyLt6MJUq0STw" value="*"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>// Takes Booking Info, Database, Booking confirmation file and Error file as an arguments and performs flight booking operation&#xD;
+		if (args.length == 4) {&#xD;
+			bookingFile = args[0];&#xD;
+			flightDB = args[1];&#xD;
+			bookingCsv = args[2];&#xD;
+			bookingError = args[3];&#xD;
+&#xD;
+			Booking booking = new Booking(flightDB, bookingCsv, bookingError);&#xD;
+			booking.bookFlight(bookingFile);&#xD;
+		} else {&#xD;
+			System.out.println(&quot;Please provide proper arguments&quot;);&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E12GcMs-EeyLt6MJUq0STw" name="main" isStatic="true" method="_E5f3YMs-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E12Gccs-EeyLt6MJUq0STw" name="args">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E12Gcss-EeyLt6MJUq0STw" value="*"/>
+          </ownedParameter>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E13UkMs-EeyLt6MJUq0STw" name="SeatCategory">
+        <generalization xmi:id="_E4jcMcs-EeyLt6MJUq0STw" general="_E18NEMs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5EZkcs-EeyLt6MJUq0STw" name="flightAvailableSeats" visibility="private">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5FAocs-EeyLt6MJUq0STw" name="flightPrice">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5f3Y8s-EeyLt6MJUq0STw" name="SeatCategory" specification="_E14isMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5f3ZMs-EeyLt6MJUq0STw" name="flightAvailableSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5f3Zcs-EeyLt6MJUq0STw" name="flightPrice">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5f3Zss-EeyLt6MJUq0STw" type="_E13UkMs-EeyLt6MJUq0STw" direction="return"/>
+          <language>java</language>
+          <body>this.flightAvailableSeats = flightAvailableSeats;&#xD;
+		this.flightPrice = flightPrice;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5f3Z8s-EeyLt6MJUq0STw" name="getAvaliableSeats" specification="_E15JwMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5f3aMs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.flightAvailableSeats;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5gecMs-EeyLt6MJUq0STw" name="setAvaliableSeats" specification="_E15w0Ms-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5geccs-EeyLt6MJUq0STw" name="avaliableSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>this.flightAvailableSeats = avaliableSeats;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5gecss-EeyLt6MJUq0STw" name="validateRequest" specification="_E4iOEMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5gec8s-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>int seats = getAvaliableSeats();&#xD;
+		double price = getFlightPrice();&#xD;
+		String BookingSeat = data.numberOfSeats;&#xD;
+		&#xD;
+		if (BookingSeat.matches(&quot;-?(0|[1-9]\\d*)&quot;) &amp;&amp; Integer.parseInt(BookingSeat) &lt;= seats) {&#xD;
+			double totalPrice = Integer.parseInt(BookingSeat) * price;&#xD;
+			data.csvList.add(data.numberOfSeats);&#xD;
+			data.csvList.add(String.valueOf(totalPrice));&#xD;
+		} else {&#xD;
+			data.printErrorToFile(data, &quot; : Seats not avaliable or seat request invalid&quot; + &quot;\n&quot;);&#xD;
+			throw new Exception();&#xD;
+		}&#xD;
+		setNextRequest(null);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E14isMs-EeyLt6MJUq0STw" name="SeatCategory" method="_E5f3Y8s-EeyLt6MJUq0STw">
+          <eAnnotations xmi:id="_E14is8s-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E14itMs-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E14iscs-EeyLt6MJUq0STw" name="flightAvailableSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E14isss-EeyLt6MJUq0STw" name="flightPrice">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E14itcs-EeyLt6MJUq0STw" type="_E13UkMs-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E15JwMs-EeyLt6MJUq0STw" name="getAvaliableSeats" method="_E5f3Z8s-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E15Jwcs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E15w0Ms-EeyLt6MJUq0STw" name="setAvaliableSeats" method="_E5gecMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E15w0cs-EeyLt6MJUq0STw" name="avaliableSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4iOEMs-EeyLt6MJUq0STw" name="validateRequest" method="_E5gecss-EeyLt6MJUq0STw" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4iOEcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E18NEMs-EeyLt6MJUq0STw" name="ValidateRequest" isAbstract="true">
+        <ownedAttribute xmi:id="_E5FnsMs-EeyLt6MJUq0STw" name="nextRequest" visibility="protected" type="_E18NEMs-EeyLt6MJUq0STw" association="_E52cscs-EeyLt6MJUq0STw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5gedMs-EeyLt6MJUq0STw" name="setNextRequest" specification="_E4kDQMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5gedcs-EeyLt6MJUq0STw" name="nextRequest" type="_E18NEMs-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E5gedss-EeyLt6MJUq0STw" type="_E18NEMs-EeyLt6MJUq0STw" direction="return"/>
+          <language>java</language>
+          <body>this.nextRequest = nextRequest;&#xD;
+		return nextRequest;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E4kDQMs-EeyLt6MJUq0STw" name="setNextRequest" method="_E5gedMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4kDQcs-EeyLt6MJUq0STw" name="nextRequest" type="_E18NEMs-EeyLt6MJUq0STw"/>
+          <ownedParameter xmi:id="_E4kDQss-EeyLt6MJUq0STw" type="_E18NEMs-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4kqUMs-EeyLt6MJUq0STw" name="validateRequest" isAbstract="true" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4kqUcs-EeyLt6MJUq0STw" name="nextRequest" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E1-CQMs-EeyLt6MJUq0STw" name="VisaCard">
+        <generalization xmi:id="_E4l4css-EeyLt6MJUq0STw" general="_E1cd0Ms-EeyLt6MJUq0STw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5ged8s-EeyLt6MJUq0STw" name="validateCardDetails" specification="_E1_QYss-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5geeMs-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5geecs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return (cardInfo.length() == 16 || cardInfo.length() == 13);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hFgMs-EeyLt6MJUq0STw" name="validateRequest" specification="_E4lRYMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5hFgcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>if(validateCardDetails(data.paymentCardNumber)) {&#xD;
+			setNextRequest(null);&#xD;
+		} else {&#xD;
+			data.printErrorToFile(data, &quot; : invalid card&quot; + &quot;\n&quot;);&#xD;
+			throw new Exception();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E1-pUMs-EeyLt6MJUq0STw" name="VisaCard">
+          <eAnnotations xmi:id="_E1-pUcs-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E1-pUss-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E1_QYcs-EeyLt6MJUq0STw" type="_E1-CQMs-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E1_QYss-EeyLt6MJUq0STw" name="validateCardDetails" method="_E5ged8s-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E1_3cMs-EeyLt6MJUq0STw" name="cardInfo">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E1_3ccs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4lRYMs-EeyLt6MJUq0STw" name="validateRequest" method="_E5hFgMs-EeyLt6MJUq0STw" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4lRYcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E2NS0Ms-EeyLt6MJUq0STw" name="Flight">
+        <generalization xmi:id="_E4ubUss-EeyLt6MJUq0STw" general="_E18NEMs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5LHQMs-EeyLt6MJUq0STw" name="flightArrival">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5MVYss-EeyLt6MJUq0STw" name="categorySeatmapper" visibility="package" type="_E13UkMs-EeyLt6MJUq0STw" association="_E53DxMs-EeyLt6MJUq0STw">
+          <qualifier xmi:id="_E5M8css-EeyLt6MJUq0STw">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </qualifier>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5M8cMs-EeyLt6MJUq0STw" value="new HashMap&lt;String, SeatCategory>()"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5NjgMs-EeyLt6MJUq0STw" name="validateRequestObject" visibility="package" type="_E18NEMs-EeyLt6MJUq0STw" association="_E53q0ss-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5pBUMs-EeyLt6MJUq0STw" name="flightDeparture">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5poYMs-EeyLt6MJUq0STw" name="flightNumber">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5poY8s-EeyLt6MJUq0STw" value="null"/>
+        </ownedAttribute>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5iTpMs-EeyLt6MJUq0STw" name="Flight" specification="_E2N54Ms-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5iTpcs-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5iTpss-EeyLt6MJUq0STw" name="flightArrival">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5iTp8s-EeyLt6MJUq0STw" name="flightDeparture">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5iTqMs-EeyLt6MJUq0STw" type="_E2NS0Ms-EeyLt6MJUq0STw" direction="return"/>
+          <language>java</language>
+          <body>this.flightNumber = flightNumber;&#xD;
+		this.flightArrival = flightArrival;&#xD;
+		this.flightDeparture = flightDeparture;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5i6sMs-EeyLt6MJUq0STw" name="storeCategoryDetails" specification="_E2Og9cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5i6scs-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5i6sss-EeyLt6MJUq0STw" name="flightAvailableSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5i6s8s-EeyLt6MJUq0STw" name="flightPrice">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>int availableSeats = Integer.parseInt(flightAvailableSeats);&#xD;
+		double price = Double.parseDouble(flightPrice);&#xD;
+		SeatCategory seatCategory = new SeatCategory(availableSeats, price);&#xD;
+		categorySeatmapper.put(category, seatCategory);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5i6tMs-EeyLt6MJUq0STw" name="setFlightNumber" specification="_E2PIAss-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5i6tcs-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>flightNumber = this.flightNumber;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5i6tss-EeyLt6MJUq0STw" name="getFlightNumber" specification="_E2PIBMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5i6t8s-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return flightNumber;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5i6uMs-EeyLt6MJUq0STw" name="setFlightDeparture" specification="_E2PvEcs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5i6ucs-EeyLt6MJUq0STw" name="departure">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>flightDeparture = departure;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5i6uss-EeyLt6MJUq0STw" name="getFlightDeparture" specification="_E2PvE8s-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5i6u8s-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return this.flightDeparture;&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5jhwMs-EeyLt6MJUq0STw" name="setAvaliableSeats" specification="_E2QWIMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5jhwcs-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5jhwss-EeyLt6MJUq0STw" name="avaliableSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>categorySeatmapper.get(category).setAvaliableSeats(avaliableSeats);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5jhw8s-EeyLt6MJUq0STw" name="getAvaliableSeats" specification="_E2QWI8s-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5jhxMs-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5jhxcs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return categorySeatmapper.get(category).getAvaliableSeats();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5jhxss-EeyLt6MJUq0STw" name="setFlightPrice" specification="_E2Q9Mcs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5jhx8s-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5jhyMs-EeyLt6MJUq0STw" name="flightPrice">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>categorySeatmapper.get(category).setFlightPrice(flightPrice);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5jhycs-EeyLt6MJUq0STw" name="getFlightPrice" specification="_E2RkQMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5jhyss-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5jhy8s-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return categorySeatmapper.get(category).getFlightPrice();&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5jhzMs-EeyLt6MJUq0STw" name="isSeatCategoryExsist" specification="_E2RkQ8s-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5jhzcs-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5jhzss-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>return categorySeatmapper.containsKey(category);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5kI0Ms-EeyLt6MJUq0STw" name="validateRequest" specification="_E4t0QMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5kI0cs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>if (data.seatCategory != null &amp;&amp; isSeatCategoryExsist(data.seatCategory)) {&#xD;
+			data.csvList.add(data.seatCategory);&#xD;
+			validateRequestObject = setNextRequest(categorySeatmapper.get(data.seatCategory));&#xD;
+			validateRequestObject.validateRequest(data);&#xD;
+		} else {&#xD;
+			data.printErrorToFile(data, &quot; : invalid seat category&quot; + &quot;\n&quot;);&#xD;
+			throw new Exception();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E2N54Ms-EeyLt6MJUq0STw" name="Flight" method="_E5iTpMs-EeyLt6MJUq0STw">
+          <eAnnotations xmi:id="_E2Og8ss-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E2Og88s-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E2N54cs-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2Og8Ms-EeyLt6MJUq0STw" name="flightArrival">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2Og8cs-EeyLt6MJUq0STw" name="flightDeparture">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2Og9Ms-EeyLt6MJUq0STw" type="_E2NS0Ms-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2Og9cs-EeyLt6MJUq0STw" name="storeCategoryDetails" method="_E5i6sMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2Og9ss-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2PIAMs-EeyLt6MJUq0STw" name="flightAvailableSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2PIAcs-EeyLt6MJUq0STw" name="flightPrice">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2PIAss-EeyLt6MJUq0STw" name="setFlightNumber" method="_E5i6tMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2PIA8s-EeyLt6MJUq0STw" name="flightNumber">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2PIBMs-EeyLt6MJUq0STw" name="getFlightNumber" method="_E5i6tss-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2PvEMs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2PvEcs-EeyLt6MJUq0STw" name="setFlightDeparture" method="_E5i6uMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2PvEss-EeyLt6MJUq0STw" name="departure">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2PvE8s-EeyLt6MJUq0STw" name="getFlightDeparture" method="_E5i6uss-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2PvFMs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2QWIMs-EeyLt6MJUq0STw" name="setAvaliableSeats" method="_E5jhwMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2QWIcs-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2QWIss-EeyLt6MJUq0STw" name="avaliableSeats">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2QWI8s-EeyLt6MJUq0STw" name="getAvaliableSeats" method="_E5jhw8s-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2QWJMs-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2Q9MMs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2Q9Mcs-EeyLt6MJUq0STw" name="setFlightPrice" method="_E5jhxss-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2Q9Mss-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2Q9M8s-EeyLt6MJUq0STw" name="flightPrice">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2RkQMs-EeyLt6MJUq0STw" name="getFlightPrice" method="_E5jhycs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2RkQcs-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2RkQss-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2RkQ8s-EeyLt6MJUq0STw" name="isSeatCategoryExsist" method="_E5jhzMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2RkRMs-EeyLt6MJUq0STw" name="category">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2RkRcs-EeyLt6MJUq0STw" direction="return">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4t0QMs-EeyLt6MJUq0STw" name="validateRequest" method="_E5kI0Ms-EeyLt6MJUq0STw" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4t0Qcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_E2TZcMs-EeyLt6MJUq0STw" name="Booking">
+        <generalization xmi:id="_E4xeoss-EeyLt6MJUq0STw" general="_E18NEMs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5OKkMs-EeyLt6MJUq0STw" name="flightDatabase" visibility="package" type="_E1nc8Ms-EeyLt6MJUq0STw" association="_E54R4cs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5OKkss-EeyLt6MJUq0STw" name="flight" visibility="package" type="_E2NS0Ms-EeyLt6MJUq0STw" association="_E5448cs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5Oxocs-EeyLt6MJUq0STw" name="validateRequestObject" visibility="package" type="_E18NEMs-EeyLt6MJUq0STw" association="_E5449Ms-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5Oxo8s-EeyLt6MJUq0STw" name="avaliableSeats" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5PYsss-EeyLt6MJUq0STw" name="visaCard" visibility="package" type="_E1-CQMs-EeyLt6MJUq0STw" association="_E55gAcs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5P_wMs-EeyLt6MJUq0STw" name="masterCard" visibility="package" type="_E1ycEMs-EeyLt6MJUq0STw" association="_E56HEcs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5Qm0Ms-EeyLt6MJUq0STw" name="discoverCard" visibility="package" type="_E1ikcMs-EeyLt6MJUq0STw" association="_E56HFMs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5Qm0ss-EeyLt6MJUq0STw" name="amexCard" visibility="package" type="_E1WXMMs-EeyLt6MJUq0STw" association="_E56uIcs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5RN4cs-EeyLt6MJUq0STw" name="data" visibility="package" type="_E1dr8Ms-EeyLt6MJUq0STw" association="_E57VMcs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5RN48s-EeyLt6MJUq0STw" name="csv" visibility="package" type="_E4ULoMs-EeyLt6MJUq0STw" association="_E578Qcs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5R08ss-EeyLt6MJUq0STw" name="csvlist" visibility="package" isOrdered="true">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_E5R088s-EeyLt6MJUq0STw" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5qPcMs-EeyLt6MJUq0STw" name="updatedSeats" visibility="package">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_E5q2gMs-EeyLt6MJUq0STw" name="text" visibility="package" type="_E4ULoMs-EeyLt6MJUq0STw" association="_E59KYcs-EeyLt6MJUq0STw"/>
+        <ownedAttribute xmi:id="_E5q2g8s-EeyLt6MJUq0STw" name="flightData" visibility="package" type="_E4ULoMs-EeyLt6MJUq0STw" association="_E59xcMs-EeyLt6MJUq0STw"/>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5kI0ss-EeyLt6MJUq0STw" name="Booking" specification="_E2UnkMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5kI08s-EeyLt6MJUq0STw" name="flightDB">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5kI1Ms-EeyLt6MJUq0STw" name="bookingCsv">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5kI1cs-EeyLt6MJUq0STw" name="bookingError">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E5kI1ss-EeyLt6MJUq0STw" type="_E2TZcMs-EeyLt6MJUq0STw" direction="return"/>
+          <language>java</language>
+          <body>visaCard = new VisaCard();&#xD;
+		masterCard = new MasterCard();&#xD;
+		discoverCard = new DiscoverCard();&#xD;
+		amexCard = new AmexCard();&#xD;
+		flightData = new File(flightDB);&#xD;
+		csv = new File(bookingCsv);&#xD;
+		text = new File(bookingError);&#xD;
+&#xD;
+		flightDatabase = FlightDatabase.getInstance();&#xD;
+		flightDatabase.createFlight(flightDB);&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5kI18s-EeyLt6MJUq0STw" name="bookFlight" specification="_E2V1sMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5kI2Ms-EeyLt6MJUq0STw" name="bookingData">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <language>java</language>
+          <body>FileReader fReader = new FileReader(bookingData);&#xD;
+&#xD;
+		CSVReader csvReader = new CSVReaderBuilder(fReader).withSkipLines(1).build();&#xD;
+		List&lt;String[]> allData = csvReader.readAll();&#xD;
+&#xD;
+		for (String[] row : allData) {&#xD;
+			csvlist = new ArrayList&lt;String>();&#xD;
+			try {&#xD;
+				data = new Data(row[0], row[1], row[2], row[3], row[4], csv, text, csvlist);&#xD;
+&#xD;
+				validateRequest(data);&#xD;
+&#xD;
+				if (data.paymentCardNumber.length() &lt; 19 || data.paymentCardNumber.length() > 12) {&#xD;
+					if (data.paymentCardNumber.startsWith(&quot;4&quot;)) {&#xD;
+						validateRequestObject = setNextRequest(visaCard);&#xD;
+						validateRequestObject.validateRequest(data);&#xD;
+					} else if (data.paymentCardNumber.startsWith(&quot;5&quot;)) {&#xD;
+						validateRequestObject = setNextRequest(masterCard);&#xD;
+						validateRequestObject.validateRequest(data);&#xD;
+					} else if (data.paymentCardNumber.substring(0, 4) == &quot;6011&quot;) {&#xD;
+						validateRequestObject = setNextRequest(discoverCard);&#xD;
+						validateRequestObject.validateRequest(data);&#xD;
+					} else if (data.paymentCardNumber.startsWith(&quot;3&quot;)) {&#xD;
+						validateRequestObject = setNextRequest(amexCard);&#xD;
+						validateRequestObject.validateRequest(data);&#xD;
+					} else {&#xD;
+						data.printErrorToFile(data, &quot; : invalid card&quot; + &quot;\n&quot;);&#xD;
+						throw new Exception();&#xD;
+					}&#xD;
+				} else {&#xD;
+					data.printErrorToFile(data, &quot; : invalid card&quot; + &quot;\n&quot;);&#xD;
+					throw new Exception();&#xD;
+				}&#xD;
+&#xD;
+				flight = flightDatabase.getFlightInfo(data.flightNumber);&#xD;
+				avaliableSeats = flight.getAvaliableSeats(data.seatCategory);&#xD;
+				updatedSeats = avaliableSeats - Integer.parseInt(data.numberOfSeats);&#xD;
+				flight.setAvaliableSeats(data.seatCategory, updatedSeats);&#xD;
+&#xD;
+				if (flightDatabase.updateFlightInfo(data.flightNumber, flight)) {&#xD;
+					data.printListToCsv(data, csvlist);&#xD;
+				} else {&#xD;
+					throw new Exception(&quot;Booking is not successful&quot;);&#xD;
+				}&#xD;
+			} catch (Exception e) {&#xD;
+&#xD;
+			}&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5kv4Ms-EeyLt6MJUq0STw" name="validateRequest" specification="_E4w3kMs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E5kv4cs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+          <language>java</language>
+          <body>if (flightDatabase != null) {&#xD;
+			data.csvList.add(data.bookingName);&#xD;
+			validateRequestObject = setNextRequest(flightDatabase);&#xD;
+			validateRequestObject.validateRequest(data);&#xD;
+		} else {&#xD;
+			data.printErrorToFile(data, &quot; : invalid flight number&quot; + &quot;\n&quot;);&#xD;
+			throw new Exception();&#xD;
+		}&#xD;
+	</body>
+        </ownedBehavior>
+        <ownedOperation xmi:id="_E2UnkMs-EeyLt6MJUq0STw" name="Booking" method="_E5kI0ss-EeyLt6MJUq0STw">
+          <eAnnotations xmi:id="_E2VOo8s-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+            <details xmi:id="_E2VOpMs-EeyLt6MJUq0STw" key="create"/>
+          </eAnnotations>
+          <ownedParameter xmi:id="_E2VOoMs-EeyLt6MJUq0STw" name="flightDB">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2VOocs-EeyLt6MJUq0STw" name="bookingCsv">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2VOoss-EeyLt6MJUq0STw" name="bookingError">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+          <ownedParameter xmi:id="_E2VOpcs-EeyLt6MJUq0STw" type="_E2TZcMs-EeyLt6MJUq0STw" direction="return"/>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E2V1sMs-EeyLt6MJUq0STw" name="bookFlight" method="_E5kI18s-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E2V1scs-EeyLt6MJUq0STw" name="bookingData">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedParameter>
+        </ownedOperation>
+        <ownedOperation xmi:id="_E4w3kMs-EeyLt6MJUq0STw" name="validateRequest" method="_E5kv4Ms-EeyLt6MJUq0STw" raisedException="_E40h8cs-EeyLt6MJUq0STw">
+          <ownedParameter xmi:id="_E4w3kcs-EeyLt6MJUq0STw" name="data" type="_E1dr8Ms-EeyLt6MJUq0STw"/>
+        </ownedOperation>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E50AcMs-EeyLt6MJUq0STw" name="" memberEnd="_E50Accs-EeyLt6MJUq0STw _E4-6Acs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E50Accs-EeyLt6MJUq0STw" name="" type="_E1dr8Ms-EeyLt6MJUq0STw" association="_E50AcMs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E50ngMs-EeyLt6MJUq0STw" name="" memberEnd="_E50ngcs-EeyLt6MJUq0STw _E5AvMMs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E50ngcs-EeyLt6MJUq0STw" name="" type="_E1nc8Ms-EeyLt6MJUq0STw" association="_E50ngMs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E50ng8s-EeyLt6MJUq0STw" name="" memberEnd="_E50nhMs-EeyLt6MJUq0STw _E5B9Ucs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E50nhMs-EeyLt6MJUq0STw" name="" type="_E1nc8Ms-EeyLt6MJUq0STw" association="_E50ng8s-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E51Okcs-EeyLt6MJUq0STw" name="" memberEnd="_E51Okss-EeyLt6MJUq0STw _E5CkYMs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E51Okss-EeyLt6MJUq0STw" name="" type="_E1nc8Ms-EeyLt6MJUq0STw" association="_E51Okcs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E511ocs-EeyLt6MJUq0STw" name="" memberEnd="_E511oss-EeyLt6MJUq0STw _E5CkYss-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E511oss-EeyLt6MJUq0STw" name="" type="_E1nc8Ms-EeyLt6MJUq0STw" association="_E511ocs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E52cscs-EeyLt6MJUq0STw" name="" memberEnd="_E52csss-EeyLt6MJUq0STw _E5FnsMs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E52csss-EeyLt6MJUq0STw" name="" type="_E18NEMs-EeyLt6MJUq0STw" association="_E52cscs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E53DxMs-EeyLt6MJUq0STw" name="" memberEnd="_E53q0Ms-EeyLt6MJUq0STw _E5MVYss-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E53q0Ms-EeyLt6MJUq0STw" name="" type="_E2NS0Ms-EeyLt6MJUq0STw" association="_E53DxMs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E53q0ss-EeyLt6MJUq0STw" name="" memberEnd="_E53q08s-EeyLt6MJUq0STw _E5NjgMs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E53q08s-EeyLt6MJUq0STw" name="" type="_E2NS0Ms-EeyLt6MJUq0STw" association="_E53q0ss-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E54R4cs-EeyLt6MJUq0STw" name="" memberEnd="_E54R4ss-EeyLt6MJUq0STw _E5OKkMs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E54R4ss-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E54R4cs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E5448cs-EeyLt6MJUq0STw" name="" memberEnd="_E5448ss-EeyLt6MJUq0STw _E5OKkss-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E5448ss-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E5448cs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E5449Ms-EeyLt6MJUq0STw" name="" memberEnd="_E5449cs-EeyLt6MJUq0STw _E5Oxocs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E5449cs-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E5449Ms-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E55gAcs-EeyLt6MJUq0STw" name="" memberEnd="_E55gAss-EeyLt6MJUq0STw _E5PYsss-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E55gAss-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E55gAcs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E56HEcs-EeyLt6MJUq0STw" name="" memberEnd="_E56HEss-EeyLt6MJUq0STw _E5P_wMs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E56HEss-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E56HEcs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E56HFMs-EeyLt6MJUq0STw" name="" memberEnd="_E56HFcs-EeyLt6MJUq0STw _E5Qm0Ms-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E56HFcs-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E56HFMs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E56uIcs-EeyLt6MJUq0STw" name="" memberEnd="_E56uIss-EeyLt6MJUq0STw _E5Qm0ss-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E56uIss-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E56uIcs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E57VMcs-EeyLt6MJUq0STw" name="" memberEnd="_E57VMss-EeyLt6MJUq0STw _E5RN4cs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E57VMss-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E57VMcs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E578Qcs-EeyLt6MJUq0STw" name="" memberEnd="_E578Qss-EeyLt6MJUq0STw _E5RN48s-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E578Qss-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E578Qcs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E58jUcs-EeyLt6MJUq0STw" name="" memberEnd="_E58jUss-EeyLt6MJUq0STw _E5nMIMs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E58jUss-EeyLt6MJUq0STw" name="" type="_E1dr8Ms-EeyLt6MJUq0STw" association="_E58jUcs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E59KYcs-EeyLt6MJUq0STw" name="" memberEnd="_E59KYss-EeyLt6MJUq0STw _E5q2gMs-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E59KYss-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E59KYcs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_E59xcMs-EeyLt6MJUq0STw" name="" memberEnd="_E59xccs-EeyLt6MJUq0STw _E5q2g8s-EeyLt6MJUq0STw">
+        <ownedEnd xmi:id="_E59xccs-EeyLt6MJUq0STw" name="" type="_E2TZcMs-EeyLt6MJUq0STw" association="_E59xcMs-EeyLt6MJUq0STw"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_E0s28Ms-EeyLt6MJUq0STw" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_E0s28cs-EeyLt6MJUq0STw" name="io">
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4SWccs-EeyLt6MJUq0STw" name="BufferedWriter"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4ULoMs-EeyLt6MJUq0STw" name="File"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4VZwMs-EeyLt6MJUq0STw" name="FileWriter"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4WA0Ms-EeyLt6MJUq0STw" name="IOException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4a5UMs-EeyLt6MJUq0STw" name="FileReader"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4nGkcs-EeyLt6MJUq0STw" name="FileNotFoundException"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_E0teAMs-EeyLt6MJUq0STw" name="util">
+        <packagedElement xmi:type="uml:Package" xmi:id="_E0teAcs-EeyLt6MJUq0STw" name="stream">
+          <packagedElement xmi:type="uml:Class" xmi:id="_E4XO8Ms-EeyLt6MJUq0STw" name="Collectors"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_E4Wn4Ms-EeyLt6MJUq0STw" name="List"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4bgYcs-EeyLt6MJUq0STw" name="HashMap"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_E4cHccs-EeyLt6MJUq0STw" name="Map"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4oUscs-EeyLt6MJUq0STw" name="Scanner"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4vpcMs-EeyLt6MJUq0STw" name="ArrayList"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Package" xmi:id="_E40h8Ms-EeyLt6MJUq0STw" name="lang">
+        <packagedElement xmi:type="uml:Class" xmi:id="_E40h8cs-EeyLt6MJUq0STw" name="Exception"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_E00ywMs-EeyLt6MJUq0STw" name="com">
+      <packagedElement xmi:type="uml:Package" xmi:id="_E00ywcs-EeyLt6MJUq0STw" name="opencsv">
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4cugcs-EeyLt6MJUq0STw" name="CSVReader"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4d8oMs-EeyLt6MJUq0STw" name="CSVReaderBuilder"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_E09VoMs-EeyLt6MJUq0STw" name="cmpe202">
+      <packagedElement xmi:type="uml:Package" xmi:id="_E0_x4Ms-EeyLt6MJUq0STw" name="flightreservation">
+        <packagedElement xmi:type="uml:Class" xmi:id="_E2AegMs-EeyLt6MJUq0STw" name="AppTest">
+          <eAnnotations xmi:id="_E2BFkMs-EeyLt6MJUq0STw" source="http://ns.yatta.de/umllab">
+            <contents xmi:type="ecore:EAnnotation" xmi:id="_E2BFkcs-EeyLt6MJUq0STw" source="codegen">
+              <details xmi:id="_E2BFkss-EeyLt6MJUq0STw" key="codegenDirectory" value="/flightreservation/src/test/java"/>
+            </contents>
+          </eAnnotations>
+          <ownedAttribute xmi:id="_E5GOwMs-EeyLt6MJUq0STw" name="errorFile" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5GOwcs-EeyLt6MJUq0STw" value="&quot;src/test/resources/error.txt&quot;"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_E5G10Ms-EeyLt6MJUq0STw" name="bookingConfirmation" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5G10cs-EeyLt6MJUq0STw" value="&quot;src/test/resources/bookingSuccess.csv&quot;"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_E5Hc4Ms-EeyLt6MJUq0STw" name="flightDatabase" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5Hc4cs-EeyLt6MJUq0STw" value="&quot;src/test/resources/flightDatabase.csv&quot;"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_E5Hc48s-EeyLt6MJUq0STw" name="invalidCategory" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5ID8Ms-EeyLt6MJUq0STw" value="&quot;src/test/resources/invalidCategory.csv&quot;"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_E5ID8ss-EeyLt6MJUq0STw" name="invalidPayment" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5ID88s-EeyLt6MJUq0STw" value="&quot;src/test/resources/invalidPayment.csv&quot;"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_E5IrAcs-EeyLt6MJUq0STw" name="invalidFlight" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5IrAss-EeyLt6MJUq0STw" value="&quot;src/test/resources/invalidFlight.csv&quot;"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_E5JSEcs-EeyLt6MJUq0STw" name="invalidSeatNumber" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5JSEss-EeyLt6MJUq0STw" value="&quot;src/test/resources/invalidSeatNumber.csv&quot;"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_E5J5Ics-EeyLt6MJUq0STw" name="validBooking" visibility="package">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <defaultValue xmi:type="uml:LiteralString" xmi:id="_E5J5Iss-EeyLt6MJUq0STw" value="&quot;src/test/resources/validBooking.csv&quot;"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:id="_E5KgMcs-EeyLt6MJUq0STw" name="scanner" visibility="package" type="_E4oUscs-EeyLt6MJUq0STw" association="_E53Dwcs-EeyLt6MJUq0STw"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hFgss-EeyLt6MJUq0STw" name="beforeMethod" specification="_E2C6wss-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>scanner = new Scanner(new File(errorFile));&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hFg8s-EeyLt6MJUq0STw" name="evaluateFlightObjectTest" specification="_E2EI4cs-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>Flight flight = new Flight(&quot;123&quot;, &quot;A&quot;, &quot;B&quot;);&#xD;
+		flight.storeCategoryDetails(&quot;Economy&quot;, &quot;5&quot;, &quot;500.00&quot;);&#xD;
+&#xD;
+		String flightnum = flight.getFlightNumber();&#xD;
+		assertEquals(&quot;123&quot;, flightnum);&#xD;
+&#xD;
+		int seats = flight.getAvaliableSeats(&quot;Economy&quot;);&#xD;
+		assertEquals(5, seats);&#xD;
+&#xD;
+		flight.setAvaliableSeats(&quot;Economy&quot;, 20);&#xD;
+		seats = flight.getAvaliableSeats(&quot;Economy&quot;);&#xD;
+		assertEquals(20, seats);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hFhMs-EeyLt6MJUq0STw" name="evaluateSingletonClassTest" specification="_E2Ev8cs-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>FlightDatabase fDatabase = FlightDatabase.getInstance();&#xD;
+		FlightDatabase fDatabase1 = FlightDatabase.getInstance();&#xD;
+		assertEquals(fDatabase, fDatabase1);&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hFhcs-EeyLt6MJUq0STw" name="validatePaymentStrategyHandlerTest" specification="_E2FXA8s-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>try {&#xD;
+			Booking booking = new Booking(flightDatabase, bookingConfirmation, errorFile);&#xD;
+			booking.bookFlight(invalidPayment);&#xD;
+&#xD;
+			scanner.useDelimiter(&quot;\n&quot;);&#xD;
+&#xD;
+			assertTrue(scanner.hasNext());&#xD;
+			assertEquals(&quot;Please enter correct booking details for Sierra1 : invalid card&quot;, scanner.next());&#xD;
+			assertEquals(&quot;Please enter correct booking details for Sierra2 : invalid card&quot;, scanner.next());&#xD;
+			assertEquals(&quot;Please enter correct booking details for Sierra3 : invalid card&quot;, scanner.next());&#xD;
+			assertEquals(&quot;Please enter correct booking details for Sierra4 : invalid card&quot;, scanner.next());&#xD;
+			assertEquals(&quot;Please enter correct booking details for Sierra5 : invalid card&quot;, scanner.next());&#xD;
+			assertEquals(&quot;Please enter correct booking details for Sierra6 : invalid card&quot;, scanner.next());&#xD;
+		} finally {&#xD;
+			scanner.close();&#xD;
+		}&#xD;
+&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hFhss-EeyLt6MJUq0STw" name="validateFlightHandlerTest" specification="_E2GlIMs-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>try {&#xD;
+			Booking booking = new Booking(flightDatabase, bookingConfirmation, errorFile);&#xD;
+			booking.bookFlight(invalidFlight);&#xD;
+&#xD;
+			scanner.useDelimiter(&quot;\n&quot;);&#xD;
+&#xD;
+			assertTrue(scanner.hasNext());&#xD;
+			assertEquals(&quot;Please enter correct booking details for Sierra1 : invalid flight number&quot;, scanner.next());&#xD;
+		} finally {&#xD;
+			scanner.close();&#xD;
+		}&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hskMs-EeyLt6MJUq0STw" name="validateCategoryHandlerTest" specification="_E2HMMcs-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>try {&#xD;
+			Booking booking = new Booking(flightDatabase, bookingConfirmation, errorFile);&#xD;
+			booking.bookFlight(invalidCategory);&#xD;
+&#xD;
+			scanner.useDelimiter(&quot;\n&quot;);&#xD;
+&#xD;
+			assertTrue(scanner.hasNext());&#xD;
+			assertEquals(&quot;Please enter correct booking details for Sierra1 : invalid seat category&quot;, scanner.next());&#xD;
+		} finally {&#xD;
+			scanner.close();&#xD;
+		}&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hskcs-EeyLt6MJUq0STw" name="validateSeatHandlerTest" specification="_E2HzQ8s-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>try {&#xD;
+			Booking booking = new Booking(flightDatabase, bookingConfirmation, errorFile);&#xD;
+			booking.bookFlight(invalidSeatNumber);&#xD;
+&#xD;
+			scanner.useDelimiter(&quot;\n&quot;);&#xD;
+&#xD;
+			assertTrue(scanner.hasNext());&#xD;
+			assertEquals(&#xD;
+					&quot;Please enter correct booking details for Sierra1 : Seats not avaliable or seat request invalid&quot;,&#xD;
+					scanner.next());&#xD;
+			assertEquals(&#xD;
+					&quot;Please enter correct booking details for Sierra2 : Seats not avaliable or seat request invalid&quot;,&#xD;
+					scanner.next());&#xD;
+		} finally {&#xD;
+			scanner.close();&#xD;
+		}&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hskss-EeyLt6MJUq0STw" name="ValidateRunClientTest" specification="_E2JBYcs-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>Scanner scanner = new Scanner(new File(bookingConfirmation));&#xD;
+		try {&#xD;
+			Booking booking = new Booking(flightDatabase, bookingConfirmation, errorFile);&#xD;
+			booking.bookFlight(validBooking);&#xD;
+&#xD;
+			scanner.useDelimiter(&quot;\n&quot;);&#xD;
+&#xD;
+			assertTrue(scanner.hasNext());&#xD;
+			assertEquals(&quot;Anna1,CA453,Economy,1,300.0&quot;, scanner.next());&#xD;
+			assertEquals(&quot;Anna2,CA453,Premium Economy,1,500.0&quot;, scanner.next());&#xD;
+			assertEquals(&quot;Anna3,CA453,Business,1,2000.0&quot;, scanner.next());&#xD;
+		} finally {&#xD;
+			scanner.close();&#xD;
+			new FileWriter(bookingConfirmation, false).close();&#xD;
+		}&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E5hsk8s-EeyLt6MJUq0STw" name="afterMethod" specification="_E2Jocss-EeyLt6MJUq0STw">
+            <language>java</language>
+            <body>new FileWriter(errorFile, false).close();&#xD;
+	</body>
+          </ownedBehavior>
+          <ownedOperation xmi:id="_E2BsoMs-EeyLt6MJUq0STw" name="beforeClass" isStatic="true"/>
+          <ownedOperation xmi:id="_E2C6wss-EeyLt6MJUq0STw" name="beforeMethod" method="_E5hFgss-EeyLt6MJUq0STw" raisedException="_E4nGkcs-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2EI4cs-EeyLt6MJUq0STw" name="evaluateFlightObjectTest" method="_E5hFg8s-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2Ev8cs-EeyLt6MJUq0STw" name="evaluateSingletonClassTest" method="_E5hFhMs-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2FXA8s-EeyLt6MJUq0STw" name="validatePaymentStrategyHandlerTest" method="_E5hFhcs-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2GlIMs-EeyLt6MJUq0STw" name="validateFlightHandlerTest" method="_E5hFhss-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2HMMcs-EeyLt6MJUq0STw" name="validateCategoryHandlerTest" method="_E5hskMs-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2HzQ8s-EeyLt6MJUq0STw" name="validateSeatHandlerTest" method="_E5hskcs-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2JBYcs-EeyLt6MJUq0STw" name="ValidateRunClientTest" method="_E5hskss-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2Jocss-EeyLt6MJUq0STw" name="afterMethod" method="_E5hsk8s-EeyLt6MJUq0STw" raisedException="_E4WA0Ms-EeyLt6MJUq0STw"/>
+          <ownedOperation xmi:id="_E2KPg8s-EeyLt6MJUq0STw" name="afterClass" isStatic="true"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Association" xmi:id="_E53Dwcs-EeyLt6MJUq0STw" name="" memberEnd="_E53Dwss-EeyLt6MJUq0STw _E5KgMcs-EeyLt6MJUq0STw">
+          <ownedEnd xmi:id="_E53Dwss-EeyLt6MJUq0STw" name="" type="_E2AegMs-EeyLt6MJUq0STw" association="_E53Dwcs-EeyLt6MJUq0STw"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_E09Vocs-EeyLt6MJUq0STw" name="org">
+      <packagedElement xmi:type="uml:Package" xmi:id="_E098sMs-EeyLt6MJUq0STw" name="junit">
+        <packagedElement xmi:type="uml:Class" xmi:id="_E4mfgMs-EeyLt6MJUq0STw" name="Assert"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_E4o7wMs-EeyLt6MJUq0STw" name="After"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_E4pi0Ms-EeyLt6MJUq0STw" name="AfterClass"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_E4pi0ss-EeyLt6MJUq0STw" name="Before"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_E4qJ4cs-EeyLt6MJUq0STw" name="BeforeClass"/>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_E4qw8cs-EeyLt6MJUq0STw" name="Test"/>
+      </packagedElement>
+    </packagedElement>
+    <profileApplication xmi:id="_Ei7xgMs-EeyLt6MJUq0STw">
+      <eAnnotations xmi:id="_Ei-00Ms-EeyLt6MJUq0STw" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile-Annotation_2-UMLLabProfile"/>
+      </eAnnotations>
+      <appliedProfile href="pathmap://UMLLAB_PROFILES/UMLLab.profile.uml#UMLLabProfile"/>
+    </profileApplication>
+  </uml:Model>
+  <UMLLabProfile:TargetLanguage xmi:id="_EjCfMMs-EeyLt6MJUq0STw" base_Package="_ERvT0Ms-EeyLt6MJUq0STw">
+    <languageName>java</languageName>
+  </UMLLabProfile:TargetLanguage>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E1ZagMs-EeyLt6MJUq0STw" base_Element="_E1YzcMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E1kZoss-EeyLt6MJUq0STw" base_Element="_E1jykMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E1zDIss-EeyLt6MJUq0STw" base_Element="_E1ycEcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E1_QYMs-EeyLt6MJUq0STw" base_Element="_E1-pUMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2CTsMs-EeyLt6MJUq0STw" base_Element="_E2BsoMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2C6wMs-EeyLt6MJUq0STw" base_Element="_E2BsoMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2C6wcs-EeyLt6MJUq0STw" name="BeforeClass"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2Dh0Ms-EeyLt6MJUq0STw" base_Element="_E2C6wss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2Dh0cs-EeyLt6MJUq0STw" base_Element="_E2C6wss-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2EI4Ms-EeyLt6MJUq0STw" name="Before"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2EI4ss-EeyLt6MJUq0STw" base_Element="_E2EI4cs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2EI48s-EeyLt6MJUq0STw" base_Element="_E2EI4cs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2Ev8Ms-EeyLt6MJUq0STw" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2FXAMs-EeyLt6MJUq0STw" base_Element="_E2Ev8cs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2FXAcs-EeyLt6MJUq0STw" base_Element="_E2Ev8cs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2FXAss-EeyLt6MJUq0STw" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2F-EMs-EeyLt6MJUq0STw" base_Element="_E2FXA8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2F-Ecs-EeyLt6MJUq0STw" base_Element="_E2FXA8s-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2F-Ess-EeyLt6MJUq0STw" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2GlIcs-EeyLt6MJUq0STw" base_Element="_E2GlIMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2GlIss-EeyLt6MJUq0STw" base_Element="_E2GlIMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2HMMMs-EeyLt6MJUq0STw" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2HzQMs-EeyLt6MJUq0STw" base_Element="_E2HMMcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2HzQcs-EeyLt6MJUq0STw" base_Element="_E2HMMcs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2HzQss-EeyLt6MJUq0STw" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2IaUMs-EeyLt6MJUq0STw" base_Element="_E2HzQ8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2IaUcs-EeyLt6MJUq0STw" base_Element="_E2HzQ8s-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2JBYMs-EeyLt6MJUq0STw" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2JBYss-EeyLt6MJUq0STw" base_Element="_E2JBYcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2JocMs-EeyLt6MJUq0STw" base_Element="_E2JBYcs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2Joccs-EeyLt6MJUq0STw" name="Test"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2KPgMs-EeyLt6MJUq0STw" base_Element="_E2Jocss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2KPgcs-EeyLt6MJUq0STw" base_Element="_E2Jocss-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2KPgss-EeyLt6MJUq0STw" name="After"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E2K2kMs-EeyLt6MJUq0STw" base_Element="_E2KPg8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E2K2kcs-EeyLt6MJUq0STw" base_Element="_E2KPg8s-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E2K2kss-EeyLt6MJUq0STw" name="AfterClass"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4RIUMs-EeyLt6MJUq0STw" base_Element="_E4QhQMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E4RvYMs-EeyLt6MJUq0STw" base_Element="_E4QhQMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E4RvYcs-EeyLt6MJUq0STw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_E4TkkMs-EeyLt6MJUq0STw" base_Element="_E4SWccs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4UysMs-EeyLt6MJUq0STw" base_Element="_E4ULoMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4VZwcs-EeyLt6MJUq0STw" base_Element="_E4VZwMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4WA0cs-EeyLt6MJUq0STw" base_Element="_E4WA0Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4Wn4cs-EeyLt6MJUq0STw" base_Element="_E4Wn4Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4XO8cs-EeyLt6MJUq0STw" base_Element="_E4XO8Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4aSQMs-EeyLt6MJUq0STw" base_Element="_E4ZrMMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E4aSQcs-EeyLt6MJUq0STw" base_Element="_E4ZrMMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E4aSQss-EeyLt6MJUq0STw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_E4bgYMs-EeyLt6MJUq0STw" base_Element="_E4a5UMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4cHcMs-EeyLt6MJUq0STw" base_Element="_E4bgYcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4cugMs-EeyLt6MJUq0STw" base_Element="_E4cHccs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4dVkMs-EeyLt6MJUq0STw" base_Element="_E4cugcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4d8ocs-EeyLt6MJUq0STw" base_Element="_E4d8oMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4fx0cs-EeyLt6MJUq0STw" base_Element="_E4fKxMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E4fx0ss-EeyLt6MJUq0STw" base_Element="_E4fKxMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E4fx08s-EeyLt6MJUq0STw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4hnAMs-EeyLt6MJUq0STw" base_Element="_E4g_8Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E4hnAcs-EeyLt6MJUq0STw" base_Element="_E4g_8Ms-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E4hnAss-EeyLt6MJUq0STw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4i1IMs-EeyLt6MJUq0STw" base_Element="_E4iOEMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E4i1Ics-EeyLt6MJUq0STw" base_Element="_E4iOEMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E4jcMMs-EeyLt6MJUq0STw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4lRYss-EeyLt6MJUq0STw" base_Element="_E4lRYMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E4l4cMs-EeyLt6MJUq0STw" base_Element="_E4lRYMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E4l4ccs-EeyLt6MJUq0STw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_E4nGkMs-EeyLt6MJUq0STw" base_Element="_E4mfgMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4oUsMs-EeyLt6MJUq0STw" base_Element="_E4nGkcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4oUsss-EeyLt6MJUq0STw" base_Element="_E4oUscs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4o7wcs-EeyLt6MJUq0STw" base_Element="_E4o7wMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4pi0cs-EeyLt6MJUq0STw" base_Element="_E4pi0Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4qJ4Ms-EeyLt6MJUq0STw" base_Element="_E4pi0ss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4qw8Ms-EeyLt6MJUq0STw" base_Element="_E4qJ4cs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E4rYAMs-EeyLt6MJUq0STw" base_Element="_E4qw8cs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4t0Qss-EeyLt6MJUq0STw" base_Element="_E4t0QMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E4ubUMs-EeyLt6MJUq0STw" base_Element="_E4t0QMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E4ubUcs-EeyLt6MJUq0STw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_E4wQgMs-EeyLt6MJUq0STw" base_Element="_E4vpcMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4w3kss-EeyLt6MJUq0STw" base_Element="_E4w3kMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Annotations xmi:id="_E4xeoMs-EeyLt6MJUq0STw" base_Element="_E4w3kMs-EeyLt6MJUq0STw">
+    <annotations xmi:id="_E4xeocs-EeyLt6MJUq0STw" name="Override"/>
+  </UMLLabProfile:Annotations>
+  <UMLLabProfile:Reference xmi:id="_E41JAMs-EeyLt6MJUq0STw" base_Element="_E40h8cs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Generics xmi:id="_E43lQMs-EeyLt6MJUq0STw" genericsValue="String" base_Element="_E42XKMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Generics xmi:id="_E44MUMs-EeyLt6MJUq0STw" genericsValue="String" base_Element="_E43lQ8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E4-S8cs-EeyLt6MJUq0STw" base_Property="_E4-S8Ms-EeyLt6MJUq0STw" siblings="_E5lW8Ms-EeyLt6MJUq0STw _E5l-Ass-EeyLt6MJUq0STw _E5l-Bcs-EeyLt6MJUq0STw _E5mlEss-EeyLt6MJUq0STw" root="true"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4-6AMs-EeyLt6MJUq0STw" base_Element="_E4-S8Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E4_hEMs-EeyLt6MJUq0STw" base_Property="_E4-6Acs-EeyLt6MJUq0STw" siblings="_E5nMIMs-EeyLt6MJUq0STw" root="true"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E4_hEcs-EeyLt6MJUq0STw" base_Element="_E4-6Acs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5AIIMs-EeyLt6MJUq0STw" base_Element="_E4_hEss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5AvMcs-EeyLt6MJUq0STw" base_Element="_E5AvMMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5B9UMs-EeyLt6MJUq0STw" base_Element="_E5BWQcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5B9Uss-EeyLt6MJUq0STw" base_Element="_E5B9Ucs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5CkYcs-EeyLt6MJUq0STw" base_Element="_E5CkYMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5DLcMs-EeyLt6MJUq0STw" base_Element="_E5CkYss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5Dygcs-EeyLt6MJUq0STw" base_Property="_E5DygMs-EeyLt6MJUq0STw" siblings="_E5nzMMs-EeyLt6MJUq0STw _E5nzM8s-EeyLt6MJUq0STw _E5oaQcs-EeyLt6MJUq0STw" root="true"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5EZkMs-EeyLt6MJUq0STw" base_Element="_E5DygMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5FAoMs-EeyLt6MJUq0STw" base_Element="_E5EZkcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5Fnscs-EeyLt6MJUq0STw" base_Element="_E5FnsMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5GOwss-EeyLt6MJUq0STw" base_Element="_E5GOwMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5G10ss-EeyLt6MJUq0STw" base_Element="_E5G10Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5Hc4ss-EeyLt6MJUq0STw" base_Element="_E5Hc4Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5ID8cs-EeyLt6MJUq0STw" base_Element="_E5Hc48s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5IrAMs-EeyLt6MJUq0STw" base_Element="_E5ID8ss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5JSEMs-EeyLt6MJUq0STw" base_Element="_E5IrAcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5J5IMs-EeyLt6MJUq0STw" base_Element="_E5JSEcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5KgMMs-EeyLt6MJUq0STw" base_Element="_E5J5Ics-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5KgMss-EeyLt6MJUq0STw" base_Element="_E5KgMcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5LHQcs-EeyLt6MJUq0STw" base_Element="_E5LHQMs-EeyLt6MJUq0STw">
+    <associatedElement xmi:type="uml:Operation" xmi:id="_E5LuUcs-EeyLt6MJUq0STw" name="getFlightArrival" method="_E5iToMs-EeyLt6MJUq0STw">
+      <ownedParameter xmi:id="_E5MVYcs-EeyLt6MJUq0STw" direction="return">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </associatedElement>
+    <associatedElement xmi:type="uml:Operation" xmi:id="_E5LuUss-EeyLt6MJUq0STw" name="setFlightArrival" method="_E5iToss-EeyLt6MJUq0STw">
+      <ownedParameter xmi:id="_E5MVYMs-EeyLt6MJUq0STw" name="arrival">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedParameter>
+    </associatedElement>
+  </UMLLabProfile:LegacyStyledElement>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5LuUMs-EeyLt6MJUq0STw" base_Property="_E5LHQMs-EeyLt6MJUq0STw" siblings="_E5pBUMs-EeyLt6MJUq0STw _E5poYMs-EeyLt6MJUq0STw" root="true"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5M8ccs-EeyLt6MJUq0STw" base_Element="_E5MVYss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5Njgcs-EeyLt6MJUq0STw" base_Element="_E5NjgMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5OKkcs-EeyLt6MJUq0STw" base_Element="_E5OKkMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5OxoMs-EeyLt6MJUq0STw" base_Element="_E5OKkss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5Oxoss-EeyLt6MJUq0STw" base_Element="_E5Oxocs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5PYsMs-EeyLt6MJUq0STw" base_Property="_E5Oxo8s-EeyLt6MJUq0STw" siblings="_E5qPcMs-EeyLt6MJUq0STw" root="true"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5PYscs-EeyLt6MJUq0STw" base_Element="_E5Oxo8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5PYs8s-EeyLt6MJUq0STw" base_Element="_E5PYsss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5P_wcs-EeyLt6MJUq0STw" base_Element="_E5P_wMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5Qm0cs-EeyLt6MJUq0STw" base_Element="_E5Qm0Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5RN4Ms-EeyLt6MJUq0STw" base_Element="_E5Qm0ss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5RN4ss-EeyLt6MJUq0STw" base_Element="_E5RN4cs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5R08Ms-EeyLt6MJUq0STw" base_Property="_E5RN48s-EeyLt6MJUq0STw" siblings="_E5q2gMs-EeyLt6MJUq0STw _E5q2g8s-EeyLt6MJUq0STw" root="true"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5R08cs-EeyLt6MJUq0STw" base_Element="_E5RN48s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5ScAMs-EeyLt6MJUq0STw" base_Element="_E5R08ss-EeyLt6MJUq0STw"/>
+  <uml:OpaqueBehavior xmi:id="_E5iToMs-EeyLt6MJUq0STw" name="getFlightArrival" specification="_E5LuUcs-EeyLt6MJUq0STw">
+    <ownedParameter xmi:id="_E5iTocs-EeyLt6MJUq0STw" direction="return">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>return this.flightArrival;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <uml:OpaqueBehavior xmi:id="_E5iToss-EeyLt6MJUq0STw" name="setFlightArrival" specification="_E5LuUss-EeyLt6MJUq0STw">
+    <ownedParameter xmi:id="_E5iTo8s-EeyLt6MJUq0STw" name="arrival">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </ownedParameter>
+    <language>java</language>
+    <body>flightArrival = arrival;&#xD;
+	</body>
+  </uml:OpaqueBehavior>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5l-AMs-EeyLt6MJUq0STw" base_Property="_E5lW8Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5l-Acs-EeyLt6MJUq0STw" base_Element="_E5lW8Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5l-A8s-EeyLt6MJUq0STw" base_Property="_E5l-Ass-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5l-BMs-EeyLt6MJUq0STw" base_Element="_E5l-Ass-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5mlEMs-EeyLt6MJUq0STw" base_Property="_E5l-Bcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5mlEcs-EeyLt6MJUq0STw" base_Element="_E5l-Bcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5mlE8s-EeyLt6MJUq0STw" base_Property="_E5mlEss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5mlFMs-EeyLt6MJUq0STw" base_Element="_E5mlEss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5nMIcs-EeyLt6MJUq0STw" base_Property="_E5nMIMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5nMIss-EeyLt6MJUq0STw" base_Element="_E5nMIMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5nzMcs-EeyLt6MJUq0STw" base_Property="_E5nzMMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5nzMss-EeyLt6MJUq0STw" base_Element="_E5nzMMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5nzNMs-EeyLt6MJUq0STw" base_Property="_E5nzM8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5oaQMs-EeyLt6MJUq0STw" base_Element="_E5nzM8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5oaQss-EeyLt6MJUq0STw" base_Property="_E5oaQcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5oaQ8s-EeyLt6MJUq0STw" base_Element="_E5oaQcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5pBUcs-EeyLt6MJUq0STw" base_Property="_E5pBUMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5pBUss-EeyLt6MJUq0STw" base_Element="_E5pBUMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5poYcs-EeyLt6MJUq0STw" base_Property="_E5poYMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5poYss-EeyLt6MJUq0STw" base_Element="_E5poYMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5qPccs-EeyLt6MJUq0STw" base_Property="_E5qPcMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5qPcss-EeyLt6MJUq0STw" base_Element="_E5qPcMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5q2gcs-EeyLt6MJUq0STw" base_Property="_E5q2gMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5q2gss-EeyLt6MJUq0STw" base_Element="_E5q2gMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:MultiDeclaration xmi:id="_E5rdkMs-EeyLt6MJUq0STw" base_Property="_E5q2g8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_E5rdkcs-EeyLt6MJUq0STw" base_Element="_E5q2g8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E50Acss-EeyLt6MJUq0STw" base_Element="_E50AcMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E50ngss-EeyLt6MJUq0STw" base_Element="_E50ngMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E51OkMs-EeyLt6MJUq0STw" base_Element="_E50ng8s-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E511oMs-EeyLt6MJUq0STw" base_Element="_E51Okcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E52csMs-EeyLt6MJUq0STw" base_Element="_E511ocs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E53DwMs-EeyLt6MJUq0STw" base_Element="_E52cscs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E53Dw8s-EeyLt6MJUq0STw" base_Element="_E53Dwcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E53q0cs-EeyLt6MJUq0STw" base_Element="_E53DxMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E54R4Ms-EeyLt6MJUq0STw" base_Element="_E53q0ss-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E5448Ms-EeyLt6MJUq0STw" base_Element="_E54R4cs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E54488s-EeyLt6MJUq0STw" base_Element="_E5448cs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E55gAMs-EeyLt6MJUq0STw" base_Element="_E5449Ms-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E56HEMs-EeyLt6MJUq0STw" base_Element="_E55gAcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E56HE8s-EeyLt6MJUq0STw" base_Element="_E56HEcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E56uIMs-EeyLt6MJUq0STw" base_Element="_E56HFMs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E57VMMs-EeyLt6MJUq0STw" base_Element="_E56uIcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E578QMs-EeyLt6MJUq0STw" base_Element="_E57VMcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E58jUMs-EeyLt6MJUq0STw" base_Element="_E578Qcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E59KYMs-EeyLt6MJUq0STw" base_Element="_E58jUcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E59KY8s-EeyLt6MJUq0STw" base_Element="_E59KYcs-EeyLt6MJUq0STw"/>
+  <UMLLabProfile:Reference xmi:id="_E59xcss-EeyLt6MJUq0STw" base_Element="_E59xcMs-EeyLt6MJUq0STw"/>
+</xmi:XMI>

@@ -1,0 +1,21 @@
+package test;
+
+public class OtherCard extends Card {
+	
+	public OtherCard() {
+	}
+
+	public boolean validateCardDetails(String cardInfo) {
+		return (cardInfo.length() < 19);
+	}
+
+	@Override
+	public void validateRequest(Data data) throws Exception {
+		if(validateCardDetails(data.paymentCardNumber)) {
+			setNextRequest(null);
+		} else {
+			data.printErrorToFile(data, " : invalid card" + "\n");
+			throw new Exception();
+		}
+	}
+}

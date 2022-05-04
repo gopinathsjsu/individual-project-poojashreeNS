@@ -1,0 +1,173 @@
+package cmpe202.flightreservation;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+import test.Booking;
+import test.Flight;
+import test.FlightDatabase;
+
+public class AppTest {
+	String file = "src/test/resources/bookingSuccess.csv";	
+	
+    @BeforeClass		
+    public static void beforeClass() {							
+    }		
+
+    @Before		
+    public void m2() {									
+    }			
+	
+	@Test
+	public void assertFlightObject() {
+		Flight flight = new Flight("123", "A", "B");
+		flight.storeCategoryDetails("Economy", "5", "500.00");
+
+		String flightnum = flight.getFlightNumber();
+		assertEquals("123", flightnum);
+
+		int seats = flight.getAvaliableSeats("Economy");
+		assertEquals(5, seats);
+
+		flight.setAvaliableSeats("Economy", 20);
+		seats = flight.getAvaliableSeats("Economy");
+		assertEquals(20, seats);
+	}
+
+	@Test
+	public void evaluateDatabasefromCSVTest() {
+		FlightDatabase fDatabase = FlightDatabase.getInstance();
+		FlightDatabase fDatabase1 = FlightDatabase.getInstance();
+		assertEquals(fDatabase, fDatabase1);
+	}
+
+	@Test
+	public void invalidPaymentValidation() throws IOException {
+		new FileWriter(file, false).close();
+		Scanner scanner = new Scanner(new File(file));
+		try {
+			Booking booking = new Booking("src/test/resources/flightDatabase.csv",
+					"src/test/resources/bookingSuccess.csv",
+					"src/test/resources/Error.txt");
+			booking.bookFlight("src/test/resources/InvalidPayment.csv");
+
+			scanner.useDelimiter("\n");
+
+			assertTrue(scanner.hasNext());
+			assertEquals("Please enter correct booking details for Sierra1 : invalid card", scanner.next());
+			assertEquals("Please enter correct booking details for Sierra2 : invalid card", scanner.next());
+			assertEquals("Please enter correct booking details for Sierra3 : invalid card", scanner.next());
+			assertEquals("Please enter correct booking details for Sierra4 : invalid card", scanner.next());
+			assertEquals("Please enter correct booking details for Sierra5 : invalid card", scanner.next());
+			assertEquals("Please enter correct booking details for Sierra6 : invalid card", scanner.next());
+		} finally {
+			scanner.close();
+			new FileWriter(file, false).close();
+		}
+
+	}
+	
+	@Test
+	public void invalidFlightValidation() throws IOException {
+		new FileWriter(file, false).close();
+		Scanner scanner = new Scanner(new File(file));
+		try {
+			Booking booking = new Booking("src/test/resources/flightDatabase.csv",
+					"src/test/resources/bookingSuccess.csv",
+					"src/test/resources/error.txt");
+			booking.bookFlight("src/test/resources/invalidFlight.csv");
+
+			scanner.useDelimiter("\n");
+
+			assertTrue(scanner.hasNext());
+			assertEquals("Please enter correct booking details for Sierra1 : invalid flight number", scanner.next());
+		} finally {
+			scanner.close();
+			new FileWriter(file, false).close();
+		}
+	}
+	
+	@Test
+	public void invalidSeatCategoryValidation() throws IOException {
+		new FileWriter(file, false).close();
+		Scanner scanner = new Scanner(new File(file));
+		try {
+			Booking booking = new Booking("src/test/resources/flightDatabase.csv",
+					"src/test/resources/bookingSuccess.csv",
+					"src/test/resources/error.txt");
+			booking.bookFlight("src/test/resources/invalidCategory.csv");
+
+			scanner.useDelimiter("\n");
+
+			assertTrue(scanner.hasNext());
+			assertEquals("Please enter correct booking details for Sierra1 : invalid seat category", scanner.next());
+		} finally {
+			scanner.close();
+			new FileWriter(file, false).close();
+		}
+	}
+	
+	@Test
+	public void invalidSeatNumbers() throws IOException {
+		new FileWriter(file, false).close();
+		Scanner scanner = new Scanner(new File(file));
+		try {
+			Booking booking = new Booking("src/test/resources/flightDatabase.csv",
+					"src/test/resources/bookingSuccess.csv",
+					"src/test/resources/error.txt");
+			booking.bookFlight("src/test/resources/invalidSeatNumber.csv");
+
+			scanner.useDelimiter("\n");
+
+			assertTrue(scanner.hasNext());
+			assertEquals("Please enter correct booking details for Sierra1 : Seats not avaliable or seat request invalid", scanner.next());
+			assertEquals("Please enter correct booking details for Sierra2 : Seats not avaliable or seat request invalid", scanner.next());
+		} finally {
+			scanner.close();
+			new FileWriter(file, false).close();
+		}
+	}
+	
+	@Test
+	public void validBooking() throws IOException {
+		new FileWriter(file, false).close();
+		Scanner scanner = new Scanner(new File(file));
+		try {
+			Booking booking = new Booking("src/test/resources/flightDatabase.csv",
+					"src/test/resources/bookingSuccess.csv",
+					"src/test/resources/error.txt");
+			booking.bookFlight("src/test/resources/validBooking.csv");
+
+			scanner.useDelimiter("\n");
+
+			assertTrue(scanner.hasNext());
+			assertEquals("Anna1,CA453,Economy,1,300.0", scanner.next());
+			assertEquals("Anna2,CA453,Premium Economy,1,500.0", scanner.next());
+			assertEquals("Anna3,CA453,Business,1,2000.0", scanner.next());
+		} finally {
+			scanner.close();
+			new FileWriter(file, false).close();
+		}
+	}
+	
+    @After		
+    public void afterMethod() {					
+        System.out.println("Using @After ,executed after each test cases");					
+    }
+	
+    @AfterClass		
+    public static void afterClass() {							
+        System.out.println("Using @AfterClass ,executed after all test cases");					
+    }		
+}

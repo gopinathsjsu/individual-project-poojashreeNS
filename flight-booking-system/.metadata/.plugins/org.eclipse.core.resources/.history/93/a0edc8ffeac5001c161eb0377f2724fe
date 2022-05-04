@@ -1,0 +1,6 @@
+package test;
+
+public abstract class Card {
+	
+	public abstract boolean validateCardDetails(String cardInfo);	
+}

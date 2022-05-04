@@ -1,0 +1,4 @@
+BookingName, flightNumber, seatCategory, numberOfSeats, paymentCardNumber
+Anna1,CA453,Economy,1,4120000000000
+Anna2,BY110,Premium Economy,1,4120000000000
+Anna3,BY110,Business,1,4120000000000

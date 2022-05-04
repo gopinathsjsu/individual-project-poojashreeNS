@@ -1,0 +1,16 @@
+package test;
+
+public class Data {
+	
+	String bookingName,flightNumber, seatCategory,paymentCardNumber, numberOfSeats;
+
+	public Data(String bookingName, String flightNumber, String seatCategory, String paymentCardNumber, String numberOfSeats) {
+		this.bookingName = bookingName;
+		this.flightNumber = flightNumber;
+		this.seatCategory = seatCategory;
+		this.numberOfSeats = numberOfSeats;
+		this.paymentCardNumber = paymentCardNumber;
+		
+	}
+
+}

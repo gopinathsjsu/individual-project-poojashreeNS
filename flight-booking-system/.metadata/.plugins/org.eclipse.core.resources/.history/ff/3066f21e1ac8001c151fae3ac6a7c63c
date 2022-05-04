@@ -1,0 +1,21 @@
+package test;
+
+public class DiscoverCard extends Card {
+
+	public DiscoverCard() {
+	}
+
+	public boolean validateCardDetails(String cardInfo) {
+		return (cardInfo.length() == 16 && cardInfo.substring(0, 5) == "6011");
+	}
+
+	@Override
+	public void validateRequest(Data data) {
+		if (validateCardDetails(data.paymentCardNumber)) {
+			setNextRequest(null);
+		} else {
+			
+		}
+	}
+
+}

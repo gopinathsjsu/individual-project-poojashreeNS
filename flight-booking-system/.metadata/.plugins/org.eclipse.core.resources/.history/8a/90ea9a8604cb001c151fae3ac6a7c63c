@@ -1,0 +1,2 @@
+Category(Economy,PremiumEconomy,Business),FlightNumber,AvailableSeats,Price,Arrival,Departure
+Business,BY110,5,2000,San Francisco,New York

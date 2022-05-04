@@ -1,0 +1,47 @@
+package test;
+
+public class SeatCategory extends ValidateRequest{
+	
+	private int flightAvailableSeats;
+	private double flightPrice;
+	Booking booking;
+
+	public SeatCategory(int flightAvailableSeats, double flightPrice) {
+		this.flightAvailableSeats = flightAvailableSeats;
+		this.flightPrice = flightPrice;
+	}
+	
+	public int getAvaliableSeats() {
+		return this.flightAvailableSeats;
+	}
+	
+	public double getFlightPrice() {
+		return this.flightPrice;
+	}
+	
+	public void setAvaliableSeats(int avaliableSeats) {
+		this.flightAvailableSeats = avaliableSeats;
+	}
+	
+	public void setFlightPrice(double flightPrice) {
+		this.flightPrice = flightPrice;
+	}
+
+	
+	@Override
+	public void validateRequest(Data data) throws Exception {
+		System.out.println("Seat Validation");
+		
+		int seats = getAvaliableSeats();
+		double price = getFlightPrice();
+		
+		if (Integer.parseInt(data.numberOfSeats) <= seats) {
+			double totalPrice = Integer.parseInt(data.numberOfSeats) * price;
+		} else {
+			booking.printErrorToFile(data, " : Seats not avaliable");
+			throw new Exception();
+		}
+		setNextRequest(null);
+	}
+
+}

@@ -1,0 +1,24 @@
+package test;
+
+public class MasterCard extends Card {
+	
+	public MasterCard() {
+	}
+
+	public boolean validateCardDetails(String cardInfo) {
+		return (cardInfo.length() == 16 && cardInfo.startsWith("5") && cardInfo.substring(0, 2) == "1"
+				|| cardInfo.substring(0, 2) == "2" || cardInfo.substring(0, 2) == "4"
+				|| cardInfo.substring(0, 2) == "3" || cardInfo.substring(0, 2) == "5");
+	}
+	
+	@Override
+	public void validateRequest(Data data) throws Exception {
+		if(validateCardDetails(data.paymentCardNumber)) {
+			setNextRequest(null);
+		} else {
+			data.printErrorToFile(data, " : invalid card");
+			throw new Exception();
+		}
+	}
+
+}
